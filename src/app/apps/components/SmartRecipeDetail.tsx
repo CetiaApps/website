@@ -5,34 +5,39 @@ import AppImage from '@/components/ui/AppImage';
 
 const screenshots = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_14ab51f1e-1764685127049.png",
-  alt: 'SmartRecipe home feed showing recipe discovery cards with vibrant food photography and purple navigation bar',
-  label: 'Discover'
+  src: "/assets/images/SmartRecipeMainScreen-1778436348487.png",
+  alt: 'SmartRecipe main screen showing recipe discovery and app overview',
+  label: 'Home'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_129db8dde-1778404640897.png",
-  alt: 'SmartRecipe cooking mode showing step-by-step instructions with timer and ingredient checklist',
-  label: 'Cook Mode'
+  src: "/assets/images/SmartRecipeScreenshot1-1778436348230.png",
+  alt: 'SmartRecipe showing recipe search and browse with over 200 recipes',
+  label: 'Recipes'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_13e7e6aaf-1767961634914.png",
-  alt: 'SmartRecipe meal planning calendar showing weekly schedule with calorie targets and shopping list',
-  label: 'Meal Plan'
+  src: "/assets/images/SmartRecipeScreenshot2-1778436344739.png",
+  alt: 'SmartRecipe recipe detail showing ingredients, instructions and dietary information',
+  label: 'Recipe Detail'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_15ced5786-1772092585280.png",
-  alt: 'SmartRecipe pantry tracker showing ingredient inventory with expiry dates and recipe suggestions',
-  label: 'Pantry'
+  src: "/assets/images/SmartRecipeScreenshot3-1778436344986.png",
+  alt: 'SmartRecipe smart shopping list with live supermarket price updates',
+  label: 'Shopping'
+},
+{
+  src: "/assets/images/SmartRecipeScreenshot4-1778436348276.png",
+  alt: 'SmartRecipe supermarket price comparison across major UK supermarkets',
+  label: 'Price Compare'
 }];
 
 
 const features = [
-{ title: 'AI Recipe Engine', desc: 'Learns your taste preferences and dietary restrictions to serve only recipes you\'ll love.' },
-{ title: 'Pantry Tracker', desc: 'Scan barcodes or manually add ingredients. The app suggests recipes based on what you have.' },
-{ title: 'Step-by-Step Mode', desc: 'Full-screen cooking mode with voice navigation, timers, and ingredient quantities scaled to your serving size.' },
-{ title: 'Nutritional Insights', desc: 'Detailed macros, calories, and micronutrients for every recipe. Track your daily intake automatically.' },
-{ title: 'Meal Planning', desc: 'Plan your full week in minutes. Auto-generate shopping lists and sync with your calendar.' },
-{ title: 'Community Recipes', desc: 'Discover and share recipes with a growing community of home cooks.' }];
+{ title: '200+ Recipes', desc: 'Browse and search a library of over 200 recipes covering a wide range of cuisines and meal types.' },
+{ title: 'Recipe Details', desc: 'Every recipe includes full ingredients, step-by-step instructions, and detailed dietary information.' },
+{ title: 'Smart Shopping List', desc: 'Create a shopping list directly from any recipe with a single tap — ingredients added automatically.' },
+{ title: 'Live Supermarket Prices', desc: 'Shopping lists update with live price information from all major UK supermarkets in real time.' },
+{ title: 'Supermarket Info', desc: 'View store information and opening hours for major UK supermarkets alongside your shopping list.' },
+{ title: 'Price Comparison', desc: 'Compare prices across supermarkets to find the best deal on every item in your shopping list.' }];
 
 
 export default function SmartRecipeDetail() {
@@ -65,20 +70,11 @@ export default function SmartRecipeDetail() {
             <h2 className="text-5xl md:text-6xl font-extrabold text-foreground tracking-tight mb-4">
               Smart<span className="text-primary">Recipe</span>
             </h2>
-            <p className="text-xl font-semibold text-primary mb-5">Cook smarter, eat better.</p>
+            <p className="text-xl font-semibold text-primary mb-5">Cook smarter, shop smarter.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              SmartRecipe is the AI-powered cooking companion that eliminates the daily "what&apos;s for dinner?" struggle. It learns what you love, knows what you have, and guides you through every step of cooking it perfectly.
+              SmartRecipe gives you access to over 200 recipes with full ingredients, instructions and dietary information. Create a smart shopping list from any recipe and get live price updates from all major UK supermarkets — with side-by-side price comparison so you always get the best deal.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full font-bold text-sm hover:bg-primary transition-all duration-300 hover:scale-105">
-                
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                </svg>
-                App Store
-              </a>
               <a
                 href="#"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-foreground text-background rounded-full font-bold text-sm hover:bg-primary transition-all duration-300 hover:scale-105">
@@ -97,12 +93,12 @@ export default function SmartRecipeDetail() {
             </div>
           </div>
 
-          {/* Stats */}
+          {/* App info cards */}
           <div className="scroll-reveal-hidden grid grid-cols-2 gap-4">
             {[
-            { value: '4.9★', label: 'App Store Rating', color: 'bg-secondary text-primary' },
-            { value: '30K+', label: 'Active Users', color: 'bg-accent text-accent-foreground' },
-            { value: '500K+', label: 'Recipes in Database', color: 'bg-muted text-foreground' },
+            { value: '200+', label: 'Recipes Available', color: 'bg-secondary text-primary' },
+            { value: 'UK', label: 'Supermarket Prices', color: 'bg-accent text-accent-foreground' },
+            { value: 'Live', label: 'Price Updates', color: 'bg-muted text-foreground' },
             { value: '2024', label: 'Year Launched', color: 'bg-foreground text-background' }]?.
             map((stat) =>
             <div key={stat?.label} className={`${stat?.color} rounded-2xl p-6 flex flex-col justify-between min-h-[120px]`}>

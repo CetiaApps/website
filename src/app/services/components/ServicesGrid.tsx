@@ -39,8 +39,8 @@ const services = [
       </svg>
     ),
     title: 'React Native Development',
-    desc: 'One codebase. Two premium native apps. We build with React Native + TypeScript for iOS and Android, integrating push notifications, payments, analytics, and any custom backend you need.',
-    tags: ['React Native', 'TypeScript', 'iOS & Android', 'API Integration'],
+    desc: 'One codebase. One premium native app. We build with React Native + TypeScript for Android, integrating push notifications, payments, analytics, and any custom backend you need.',
+    tags: ['React Native', 'TypeScript', 'Android', 'API Integration'],
     span: 'col-span-1 md:col-span-2',
     bg: 'bg-accent',
     textColor: 'text-accent-foreground',
@@ -53,9 +53,9 @@ const services = [
         <path d="M13 10V3L4 14h7v7l9-11h-7z" />
       </svg>
     ),
-    title: 'App Store Launch',
-    desc: 'We handle the full App Store and Google Play submission process — screenshots, descriptions, metadata, ASO optimization, and review management to maximize discoverability.',
-    tags: ['App Store', 'Google Play', 'ASO', 'Review Management'],
+    title: 'App Launch',
+    desc: 'We handle the full Google Play submission process — screenshots, descriptions, metadata, ASO optimization, and review management to maximize discoverability.',
+    tags: ['Google Play', 'ASO', 'Review Management'],
     span: 'col-span-1',
     bg: 'bg-foreground',
     textColor: 'text-background',

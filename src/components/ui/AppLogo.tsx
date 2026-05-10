@@ -13,7 +13,7 @@ interface AppLogoProps {
 }
 
 const AppLogo = memo(function AppLogo({
-  src = '/assets/images/app_logo.png',
+  src = '/assets/images/logo-1778437737480.png',
   iconName = 'SparklesIcon',
   size = 64,
   className = '',

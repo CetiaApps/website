@@ -32,7 +32,7 @@ export default function PrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              SmartRecipe is a mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the SmartRecipe mobile application available on iOS and Android platforms.
+              SmartRecipe is a mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the SmartRecipe mobile application available on Android.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               If you have questions about this policy, please contact us at <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold">admin@cetiapp.co.uk</a>.
@@ -58,7 +58,7 @@ export default function PrivacyContent() {
             </ul>
             <h3 className="text-lg font-bold text-foreground mb-3">2.3 Information from Third Parties</h3>
             <ul className="list-disc pl-6 text-muted-foreground leading-relaxed space-y-2">
-              <li><strong>Social Sign-In:</strong> If you sign in with Apple or Google, we receive your name and email address from those providers.</li>
+              <li><strong>Social Sign-In:</strong> If you sign in with Google, we receive your name and email address from that provider.</li>
               <li><strong>Analytics Providers:</strong> Aggregated, anonymized usage statistics from Firebase Analytics.</li>
             </ul>
           </section>
@@ -155,7 +155,6 @@ export default function PrivacyContent() {
                   {[
                     { service: 'Firebase (Google)', purpose: 'Analytics & crash reporting', link: 'https://firebase.google.com/support/privacy' },
                     { service: 'AWS', purpose: 'Cloud hosting & storage', link: 'https://aws.amazon.com/privacy' },
-                    { service: 'Sign in with Apple', purpose: 'Authentication', link: 'https://www.apple.com/legal/privacy' },
                     { service: 'Google Sign-In', purpose: 'Authentication', link: 'https://policies.google.com/privacy' },
                   ]?.map((row, i) => (
                     <tr key={row?.service} className={i % 2 === 0 ? 'bg-card' : 'bg-muted/50'}>

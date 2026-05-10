@@ -5,34 +5,34 @@ import AppImage from '@/components/ui/AppImage';
 
 const screenshots = [
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_1069e702b-1772175188279.png",
-  alt: 'Milo AI Assistant chat interface showing a natural conversation with intelligent responses and a clean dark-themed UI',
-  label: 'Chat'
+  src: "/assets/images/MiloScreenshot1-1778437081371.png",
+  alt: 'Milo AI Assistant showing Gmail, Google Drive and Google Calendar organisation interface',
+  label: 'Organise'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_11b8de516-1778408484884.png",
-  alt: 'Milo AI Assistant showing smart suggestions and contextual recommendations in a modern card-based layout',
-  label: 'Suggestions'
+  src: "/assets/images/MiloScreenshot2-1778437081456.png",
+  alt: 'Milo AI Assistant showing bank transaction import and financial overview',
+  label: 'Finance'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_14cc6a6a2-1778408484729.png",
-  alt: 'Milo AI Assistant voice mode screen with animated waveform and real-time transcription display',
-  label: 'Voice'
+  src: "/assets/images/MiloScreenshot3-1778437081634.png",
+  alt: 'Milo AI Assistant showing AI-powered budget and forecast charts',
+  label: 'Budget'
 },
 {
-  src: "https://img.rocket.new/generatedImages/rocket_gen_img_172e2c6b5-1778408486112.png",
-  alt: 'Milo AI Assistant task management screen showing AI-generated to-do lists and productivity insights',
+  src: "/assets/images/MiloScreenshot3-1778437081634.png",
+  alt: 'Milo AI Assistant showing AI-enabled tasks, notes and lists management',
   label: 'Tasks'
 }];
 
 
 const features = [
-{ title: 'Conversational AI', desc: 'Chat naturally with Milo using advanced language understanding. Ask anything, get intelligent, context-aware answers instantly.' },
-{ title: 'Voice Assistant', desc: 'Hands-free interaction with real-time voice recognition and natural text-to-speech responses for seamless conversations.' },
-{ title: 'Smart Summaries', desc: 'Paste any article, document, or webpage and Milo distills it into clear, concise summaries in seconds.' },
-{ title: 'Task & Schedule AI', desc: 'Let Milo help you plan your day, set reminders, and manage tasks intelligently based on your priorities.' },
-{ title: 'Personalised Learning', desc: 'Milo adapts to your communication style and preferences over time, becoming smarter and more helpful with every interaction.' },
-{ title: 'Multi-Modal Input', desc: 'Send text, voice, or images — Milo understands and responds to all input types for a truly versatile AI experience.' }];
+{ title: 'Gmail Organisation', desc: 'Milo searches and organises your Gmail inbox using AI — find emails, categorise threads and stay on top of your messages.' },
+{ title: 'Google Drive & Calendar', desc: 'Access and organise your Google Drive files and Google Calendar events directly through Milo\'s AI interface.' },
+{ title: 'Bank Transaction Import', desc: 'Import your bank account transaction files into Milo to get a clear view of your spending in one place.' },
+{ title: 'AI Budgets & Forecasts', desc: 'Milo analyses your transactions to build personalised budgets and create AI-powered financial forecasts.' },
+{ title: 'AI-Enabled Tasks', desc: 'Create and manage tasks with AI assistance — Milo helps you prioritise, organise and complete what matters most.' },
+{ title: 'Notes & Lists', desc: 'Capture notes and build lists with AI support — Milo helps you structure, search and act on your information.' }];
 
 
 export default function MiloDetail() {
@@ -65,21 +65,11 @@ export default function MiloDetail() {
             <h2 className="text-5xl md:text-6xl font-extrabold text-foreground tracking-tight mb-4">
               Milo<span style={{ color: '#7C3AED' }}>.</span>
             </h2>
-            <p className="text-xl font-semibold mb-5" style={{ color: '#7C3AED' }}>Your intelligent AI companion.</p>
+            <p className="text-xl font-semibold mb-5" style={{ color: '#7C3AED' }}>Your AI-powered personal assistant.</p>
             <p className="text-muted-foreground text-lg leading-relaxed mb-8">
-              Milo is a powerful AI assistant designed to make your life easier. From answering complex questions and summarising documents to managing your schedule and learning your preferences — Milo is always ready to help, 24/7.
+              Milo is an AI agent that searches and organises your Gmail, Google Drive and Google Calendar. Import your bank transaction files to view spending, build budgets and create AI-powered forecasts. Manage tasks, notes and lists — all AI-enabled to help you stay organised and in control.
             </p>
             <div className="flex flex-wrap gap-4">
-              <a
-                href="#"
-                className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-white hover:opacity-90 transition-all duration-300 hover:scale-105"
-                style={{ backgroundColor: '#7C3AED' }}>
-                
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
-                  <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
-                </svg>
-                App Store
-              </a>
               <a
                 href="#"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-white hover:opacity-90 transition-all duration-300 hover:scale-105"
@@ -99,12 +89,12 @@ export default function MiloDetail() {
             </div>
           </div>
 
-          {/* Stats */}
+          {/* App info cards */}
           <div className="scroll-reveal-hidden grid grid-cols-2 gap-4">
             {[
-            { value: '4.9★', label: 'App Store Rating', color: 'bg-card border border-border text-foreground' },
-            { value: '25K+', label: 'Active Users', color: 'text-white', style: { backgroundColor: '#7C3AED' } },
-            { value: 'GPT-4', label: 'AI Powered', color: 'bg-accent text-accent-foreground' },
+            { value: 'Gmail', label: 'Google Integration', color: 'bg-card border border-border text-foreground' },
+            { value: 'AI', label: 'Budget & Forecasts', color: 'text-white', style: { backgroundColor: '#7C3AED' } },
+            { value: 'Tasks', label: 'Notes & Lists', color: 'bg-accent text-accent-foreground' },
             { value: '2025', label: 'Year Launched', color: 'bg-foreground text-background' }]?.
             map((stat) =>
             <div

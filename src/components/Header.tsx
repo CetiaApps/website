@@ -48,10 +48,7 @@ export default function Header() {
         <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center gap-2.5 group">
-            <AppLogo size={36} />
-            <span className="font-extrabold text-xl tracking-tight text-foreground">
-              Cetia<span className="text-primary">Apps</span>
-            </span>
+            <AppLogo src="/assets/images/logo-1778438026939.png" size={180} />
           </Link>
 
           {/* Desktop Nav */}

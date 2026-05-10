@@ -7,52 +7,60 @@ const apps = [
   {
     id: 'smartrecipe',
     name: 'SmartRecipe',
-    tagline: 'Cook smarter, eat better.',
-    description: 'AI-powered recipe discovery that learns your taste preferences, dietary needs, and pantry inventory — so every meal suggestion is one you\'ll actually make.',
+    tagline: 'Cook smarter, shop smarter.',
+    description: 'SmartRecipe gives you access to over 200 recipes with full ingredients, instructions and dietary information. Create a smart shopping list from any recipe and get live price updates from all major UK supermarkets — with side-by-side price comparison.',
     color: '#7C3AED',
     lightColor: '#F3F0FF',
     badge: 'Food & Cooking',
-    features: ['AI-powered recipe matching', 'Pantry inventory tracking', 'Step-by-step cooking mode', 'Nutritional insights', 'Meal planning calendar'],
-    rating: '4.9',
-    downloads: '30K+',
+    features: [
+      '200+ recipes with search',
+      'Ingredients, instructions & dietary info',
+      'Smart shopping list from any recipe',
+      'Live prices from major UK supermarkets',
+      'Supermarket price comparison',
+    ],
     screens: [
-      'https://images.unsplash.com/photo-1466637574441-749b8f19452f?w=300&q=85',
-      'https://images.unsplash.com/photo-1543353071-10c8ba85a904?w=300&q=85',
-      'https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=300&q=85',
+      '/assets/images/SmartRecipeScreenshot1-1778436348230.png',
+      '/assets/images/SmartRecipeScreenshot2-1778436344739.png',
+      '/assets/images/SmartRecipeScreenshot3-1778436344986.png',
     ],
     screenAlts: [
-      'SmartRecipe home screen showing featured recipe cards with colorful food photography and purple UI elements',
-      'SmartRecipe ingredient scanner screen with camera interface and ingredient recognition results',
-      'SmartRecipe meal plan calendar showing weekly meal schedule with nutritional summary',
+      'SmartRecipe app screenshot showing recipe discovery and search',
+      'SmartRecipe app screenshot showing recipe details with ingredients and instructions',
+      'SmartRecipe app screenshot showing smart shopping list with live supermarket prices',
     ],
     href: '/apps#smartrecipe',
     privacyHref: '/smart-recipe-privacy-policy',
-    platform: 'iOS & Android',
+    platform: 'Android',
   },
   {
     id: 'milo',
     name: 'Milo',
-    tagline: 'Your intelligent AI companion.',
-    description: 'Milo is a powerful AI assistant that answers questions, summarises documents, manages your schedule, and learns your preferences — making every interaction smarter than the last.',
+    tagline: 'Your AI-powered personal assistant.',
+    description: 'Milo is an AI agent that searches and organises your Gmail, Google Drive and Google Calendar. Import bank transaction files to view your spending, build budgets and create AI-powered forecasts. Manage tasks, notes and lists — all AI-enabled.',
     color: '#6D28D9',
     lightColor: '#EDE9FE',
     badge: 'AI Assistant',
-    features: ['Conversational AI chat', 'Voice assistant mode', 'Smart document summaries', 'AI-powered task management', 'Personalised learning & memory'],
-    rating: '4.9',
-    downloads: '25K+',
+    features: [
+      'Search & organise Gmail, Google Drive, Google Calendar',
+      'Import bank transaction files',
+      'AI-powered budgets and financial forecasts',
+      'AI-enabled tasks, notes and lists',
+      'Unified personal productivity hub',
+    ],
     screens: [
-      'https://images.unsplash.com/photo-1677442135703-1787eea5ce01?w=300&q=85',
-      'https://images.unsplash.com/photo-1655720828018-edd2daec9349?w=300&q=85',
-      'https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=300&q=85',
+      '/assets/images/MiloScreenshot1-1778437081371.png',
+      '/assets/images/MiloScreenshot2-1778437081456.png',
+      '/assets/images/MiloScreenshot3-1778437081634.png',
     ],
     screenAlts: [
-      'Milo AI Assistant chat interface showing a natural conversation with intelligent responses and a clean modern UI',
-      'Milo AI Assistant showing smart suggestions and contextual recommendations in a card-based layout',
-      'Milo AI Assistant voice mode screen with animated waveform and real-time transcription display',
+      'Milo AI Assistant showing Gmail and Google Drive organisation interface',
+      'Milo AI Assistant showing bank transaction import and budget overview',
+      'Milo AI Assistant showing AI-enabled tasks, notes and lists',
     ],
     href: '/apps#milo',
     privacyHref: '/milo-privacy-policy',
-    platform: 'iOS & Android',
+    platform: 'Android',
   },
 ];
 
@@ -129,18 +137,8 @@ export default function AppsShowcase() {
                   ))}
                 </ul>
 
-                {/* Stats row */}
+                {/* Platform info */}
                 <div className="flex items-center gap-6 mb-8 p-5 rounded-2xl" style={{ backgroundColor: app?.lightColor }}>
-                  <div>
-                    <div className="text-2xl font-extrabold" style={{ color: app?.color }}>{app?.rating}★</div>
-                    <div className="text-xs text-muted-foreground font-medium">App Rating</div>
-                  </div>
-                  <div className="w-px h-10 bg-border" />
-                  <div>
-                    <div className="text-2xl font-extrabold" style={{ color: app?.color }}>{app?.downloads}</div>
-                    <div className="text-xs text-muted-foreground font-medium">Downloads</div>
-                  </div>
-                  <div className="w-px h-10 bg-border" />
                   <div>
                     <div className="text-2xl font-extrabold" style={{ color: app?.color }}>{app?.platform}</div>
                     <div className="text-xs text-muted-foreground font-medium">Platform</div>

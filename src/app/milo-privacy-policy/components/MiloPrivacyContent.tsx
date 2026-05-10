@@ -30,7 +30,7 @@ export default function MiloPrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Milo is an AI assistant mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy describes how we collect, use, and protect information you provide when using the Milo app on iOS and Android devices.
+              Milo is an AI assistant mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy describes how we collect, use, and protect information you provide when using the Milo app on Android devices.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               Questions? Reach us at <a href="mailto:admin@cetiapp.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>admin@cetiapp.co.uk</a>.
@@ -56,7 +56,7 @@ export default function MiloPrivacyContent() {
             </ul>
             <h3 className="text-lg font-bold text-foreground mb-3">2.3 Information from Third Parties</h3>
             <ul className="list-disc pl-6 text-muted-foreground leading-relaxed space-y-2">
-              <li><strong>Social Sign-In:</strong> Name and email if you sign in with Apple or Google.</li>
+              <li><strong>Social Sign-In:</strong> Name and email if you sign in with Google.</li>
               <li><strong>AI Model Providers:</strong> Conversation prompts are processed by our AI model provider (e.g., OpenAI) under strict data processing agreements. These providers do not use your data to train their models.</li>
             </ul>
           </section>
@@ -171,7 +171,6 @@ export default function MiloPrivacyContent() {
                     { service: 'OpenAI', purpose: 'AI language model for generating responses', link: 'https://openai.com/policies/privacy-policy' },
                     { service: 'Firebase (Google)', purpose: 'Analytics, crash reporting & push notifications', link: 'https://firebase.google.com/support/privacy' },
                     { service: 'AWS', purpose: 'Cloud hosting & encrypted storage', link: 'https://aws.amazon.com/privacy' },
-                    { service: 'Sign in with Apple', purpose: 'Authentication', link: 'https://www.apple.com/legal/privacy' },
                     { service: 'Google Sign-In', purpose: 'Authentication', link: 'https://policies.google.com/privacy' },
                   ]?.map((row, i) => (
                     <tr key={row?.service} className={i % 2 === 0 ? 'bg-card' : 'bg-muted/50'}>

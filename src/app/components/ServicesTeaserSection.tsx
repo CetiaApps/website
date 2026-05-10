@@ -30,7 +30,7 @@ const services = [
       </svg>
     ),
     title: 'Native Development',
-    desc: 'iOS & Android apps built with React Native — one codebase, two premium experiences.',
+    desc: 'Android apps built with React Native — delivering premium native experiences.',
     span: 'col-span-1 lg:col-span-2',
   },
   {
@@ -40,7 +40,7 @@ const services = [
       </svg>
     ),
     title: 'Launch & Scale',
-    desc: 'App Store & Play Store submission, ASO optimization, and post-launch analytics setup.',
+    desc: 'Google Play submission, ASO optimization, and post-launch analytics setup.',
     span: 'col-span-1',
   },
 ];
@@ -80,7 +80,7 @@ export default function ServicesTeaserSection() {
           </div>
           <div className="scroll-reveal-hidden">
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              From idea to App Store in weeks. We handle strategy, design, development, and launch — you focus on your business.
+              From idea to Google Play in weeks. We handle strategy, design, development, and launch — you focus on your business.
             </p>
             <Link
               href="/services"
@@ -138,7 +138,7 @@ export default function ServicesTeaserSection() {
               <p className="text-sm text-primary-foreground/80 leading-relaxed">{services?.[2]?.desc}</p>
             </div>
             <div className="mt-6 flex flex-wrap gap-2">
-              {['React Native', 'iOS', 'Android', 'TypeScript']?.map(tag => (
+              {['React Native', 'Android', 'TypeScript']?.map(tag => (
                 <span key={tag} className="px-3 py-1 rounded-full bg-primary-foreground/15 text-primary-foreground text-xs font-bold">{tag}</span>
               ))}
             </div>

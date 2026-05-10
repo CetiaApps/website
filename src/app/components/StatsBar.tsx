@@ -1,10 +1,10 @@
 import React from 'react';
 
 const stats = [
-  { value: '50K+', label: 'App Downloads' },
-  { value: '4.9', label: 'Average Rating' },
   { value: '2', label: 'Live Apps' },
-  { value: '100%', label: 'Native Mobile' },
+  { value: 'Android', label: 'Platform' },
+  { value: '200+', label: 'SmartRecipe Recipes' },
+  { value: 'AI', label: 'Milo Powered' },
   { value: '24/7', label: 'App Support' },
 ];
 

@@ -28,7 +28,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-background pt-28 pb-16 px-6 md:px-10">
+    <section className="relative min-h-screen flex flex-col justify-center overflow-hidden bg-background pt-52 pb-16 px-6 md:px-10">
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
@@ -127,7 +127,7 @@ export default function HeroSection() {
               style={{ borderRadius: '2.5rem' }}>
                 <div className="w-full h-[380px] relative">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_113e923be-1774450823750.png"
+                    src="/assets/images/MiloScreenshot1-1778437081371.png"
                     alt="Milo AI Assistant chat interface showing intelligent conversation with a clean modern UI"
                     fill
                     className="object-cover"
@@ -145,8 +145,8 @@ export default function HeroSection() {
               style={{ borderRadius: '2.5rem' }}>
                 <div className="w-full h-[420px] relative">
                   <AppImage
-                    src="https://img.rocket.new/generatedImages/rocket_gen_img_14e804126-1772807029981.png"
-                    alt="SmartRecipe app showing vibrant recipe cards with ingredients and cooking steps on purple themed interface"
+                    src="/assets/images/SmartRecipeMainScreen-1778436348487.png"
+                    alt="SmartRecipe app main screen showing recipe discovery and smart shopping features"
                     fill
                     className="object-cover"
                     sizes="220px" />
@@ -170,11 +170,8 @@ export default function HeroSection() {
                   )}
                 </div>
                 <div>
-                  <div className="text-sm font-extrabold text-foreground">50K+ Users</div>
-                  <div className="text-xs text-muted-foreground">across both apps</div>
-                </div>
-                <div className="flex items-center gap-1 text-yellow-500">
-                  {'★★★★★'.split('').map((s, i) => <span key={i} className="text-sm">{s}</span>)}
+                  <div className="text-sm font-extrabold text-foreground">2 Live Apps</div>
+                  <div className="text-xs text-muted-foreground">Android</div>
                 </div>
               </div>
             </div>
@@ -184,9 +181,9 @@ export default function HeroSection() {
         {/* Bottom divider */}
         <div className="mt-20 pt-12 border-t border-border grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-          { label: 'Apps Launched', value: '2+', desc: 'Live on App Store & Play Store' },
-          { label: 'Avg Rating', value: '4.9★', desc: 'Across both platforms' },
-          { label: 'Custom Builds', value: '10+', desc: 'For businesses worldwide' }].
+          { label: 'Apps Launched', value: '2+', desc: 'Live on Google Play' },
+          { label: 'Platform', value: 'Android', desc: 'Native mobile experiences' },
+          { label: 'Custom Builds', value: 'Available', desc: 'For businesses worldwide' }].
           map((stat) =>
           <div key={stat.label} className="flex items-center gap-4">
               <div className="text-3xl font-extrabold text-primary tracking-tight">{stat.value}</div>
