@@ -8,6 +8,7 @@ const footerLinks = [
   { label: 'Services', href: '/services' },
   { label: 'Contact', href: '/contact' },
   { label: 'Privacy', href: '/smart-recipe-privacy-policy' },
+  { label: 'SmartCart Privacy', href: '/smartcart-privacy-policy' },
   { label: 'Data Deletion', href: '/smartrecipe-data-deletion' },
 ];
 
@@ -47,6 +48,8 @@ export default function Footer() {
           </p>
           <div className="flex items-center gap-4 text-xs font-medium text-muted-foreground">
             <Link href="/smart-recipe-privacy-policy" className="hover:text-foreground transition-colors">SmartRecipe Privacy</Link>
+            <span>·</span>
+            <Link href="/smartcart-privacy-policy" className="hover:text-foreground transition-colors">SmartCart Privacy</Link>
             <span>·</span>
             <Link href="/milo-privacy-policy" className="hover:text-foreground transition-colors">Milo Privacy</Link>
             <span>·</span>
