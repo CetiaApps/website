@@ -50,7 +50,7 @@ export default function SmartCartPrivacyContent() {
         <div className="prose prose-stone max-w-none">
           <div className="bg-secondary border border-primary/20 rounded-2xl p-6 mb-10">
             <p className="text-sm text-foreground leading-relaxed">
-              <strong>Summary:</strong> SmartCart helps you create grocery shopping lists, compare supermarket prices, find nearby stores, and manage subscriptions. We collect the information needed to provide those features, such as your account details, shopping-list content, price preferences, app cache data, and optional device permissions. We do not sell your personal data.
+              <strong>Summary:</strong> SmartCart helps you create grocery shopping lists, compare supermarket prices, find nearby stores, and manage subscriptions. We collect the information needed to provide those features, such as your account details, shopping-list content, price preferences, app cache data, and optional device permissions. We do not sell your personal data. You can request deletion of your SmartCart data through our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>.
             </p>
           </div>
 
@@ -198,7 +198,7 @@ export default function SmartCartPrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">8. Data Retention</h2>
             <p className="text-muted-foreground leading-relaxed">
-              We keep account, profile, shopping-list, settings, subscription, and price-lookup data for as long as your account is active or as long as needed to provide SmartCart. If you request deletion, we will delete or anonymize personal data within a reasonable period unless we need to retain limited information for legal, security, accounting, dispute, or platform-compliance reasons. Aggregated or anonymized price and catalogue data may be retained to improve grocery matching and price comparison.
+              We keep account, profile, shopping-list, settings, subscription, and price-lookup data for as long as your account is active or as long as needed to provide SmartCart. If you request deletion, we aim to delete or anonymize personal data within 14 days after receiving and verifying your request, unless we need to retain limited information for legal, security, accounting, dispute, or platform-compliance reasons. Aggregated or anonymized price and catalogue data may be retained to improve grocery matching and price comparison.
             </p>
           </section>
 
@@ -222,7 +222,7 @@ export default function SmartCartPrivacyContent() {
               <li>Complain to a data protection authority, such as the UK Information Commissioner&apos;s Office.</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              To exercise your rights, email <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold">admin@cetiaapp.co.uk</a>. We aim to respond to support and privacy requests within 30 days unless a shorter or longer period is required by law.
+              To request deletion, open SmartCart, go to Account settings, choose Help & support, tap Create support ticket, and ask for data deletion. You can find the full instructions on our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>. You can also email <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold">admin@cetiaapp.co.uk</a>. We aim to respond to support and privacy requests within 30 days unless a shorter or longer period is required by law.
             </p>
           </section>
 
