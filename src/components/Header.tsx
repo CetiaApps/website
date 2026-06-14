@@ -1,13 +1,15 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+
+import React, { useEffect, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
-import AppLogo from '@/components/ui/AppLogo';
+import { Menu, X } from 'lucide-react';
 
 const navLinks = [
   { label: 'Home', href: '/' },
-  { label: 'Apps', href: '/apps' },
   { label: 'Services', href: '/services' },
+  { label: 'SmartCart', href: '/smartcart' },
   { label: 'Contact', href: '/contact' },
 ];
 
@@ -17,50 +19,47 @@ export default function Header() {
   const pathname = usePathname();
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 40);
+    const handleScroll = () => setScrolled(window.scrollY > 18);
     window.addEventListener('scroll', handleScroll, { passive: true });
+    handleScroll();
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
-    if (menuOpen) {
-      document.body.style.overflow = 'hidden';
-    } else {
+    document.body.style.overflow = menuOpen ? 'hidden' : '';
+    return () => {
       document.body.style.overflow = '';
-    }
-    return () => { document.body.style.overflow = ''; };
+    };
   }, [menuOpen]);
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/';
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) => (href === '/' ? pathname === '/' : pathname.startsWith(href));
 
   return (
     <>
       <header
-        className={`fixed top-0 left-0 w-full z-50 transition-all duration-500 ${
-          scrolled
-            ? 'py-3 bg-background/90 backdrop-blur-xl border-b border-border shadow-sm'
-            : 'py-5 bg-transparent'
+        className={`fixed left-0 top-0 z-50 w-full transition-all duration-300 ${
+          scrolled ? 'border-b border-border bg-background/92 py-3 shadow-sm backdrop-blur-xl' : 'py-5'
         }`}
       >
-        <div className="max-w-7xl mx-auto px-6 md:px-10 flex items-center justify-between">
-          {/* Logo */}
-          <Link href="/" className="flex items-center gap-2.5 group">
-            <AppLogo src="/assets/images/logo-1778438026939.png" size={180} />
+        <div className="mx-auto flex max-w-7xl items-center justify-between px-5 md:px-10">
+          <Link href="/" className="flex min-h-[44px] items-center gap-3" aria-label="Cetia Solutions home">
+            <span className="relative h-11 w-11 overflow-hidden rounded-xl border border-border bg-card shadow-sm">
+              <Image src="/assets/images/cetia-solutions-logo.png" alt="" fill sizes="44px" className="object-cover" priority />
+            </span>
+            <span className="text-lg font-extrabold tracking-tight text-foreground">
+              Cetia <span className="text-primary">Solutions</span>
+            </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <nav className="hidden md:flex items-center gap-1">
+          <nav className="hidden items-center gap-1 md:flex" aria-label="Primary navigation">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className={`px-4 py-2 rounded-full text-sm font-semibold transition-all duration-200 ${
+                className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors ${
                   isActive(link.href)
                     ? 'bg-primary text-primary-foreground'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                    : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                 }`}
               >
                 {link.label}
@@ -68,44 +67,34 @@ export default function Header() {
             ))}
           </nav>
 
-          {/* CTA + Hamburger */}
-          <div className="flex items-center gap-3">
+          <div className="flex items-center gap-2">
             <Link
               href="/contact"
-              className="hidden md:inline-flex items-center gap-2 px-5 py-2.5 bg-primary text-primary-foreground rounded-full text-sm font-bold hover:bg-secondary-foreground transition-colors duration-200"
+              className="hidden min-h-[44px] items-center rounded-full bg-foreground px-5 text-sm font-bold text-background shadow-sm transition-colors hover:bg-primary md:inline-flex"
             >
-              Build Your App
+              Start a project
             </Link>
             <button
-              onClick={() => setMenuOpen(!menuOpen)}
+              type="button"
+              onClick={() => setMenuOpen((open) => !open)}
               aria-label="Toggle menu"
-              className="md:hidden flex flex-col gap-1.5 p-2 group"
+              aria-expanded={menuOpen}
+              className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-border bg-card text-foreground shadow-sm md:hidden"
             >
-              <span className={`block h-0.5 bg-foreground transition-all duration-300 ${menuOpen ? 'w-6 rotate-45 translate-y-2' : 'w-6'}`} />
-              <span className={`block h-0.5 bg-foreground transition-all duration-300 ${menuOpen ? 'opacity-0 w-0' : 'w-4'}`} />
-              <span className={`block h-0.5 bg-foreground transition-all duration-300 ${menuOpen ? 'w-6 -rotate-45 -translate-y-2' : 'w-6'}`} />
+              {menuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
           </div>
         </div>
       </header>
 
-      {/* Mobile Menu Overlay */}
-      <div
-        className={`fixed inset-0 z-40 md:hidden transition-all duration-400 ${
-          menuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
-        }`}
-      >
-        <div className="absolute inset-0 bg-background/95 backdrop-blur-xl" onClick={() => setMenuOpen(false)} />
-        <nav className="relative z-10 flex flex-col items-center justify-center h-full gap-6 px-8">
-          {navLinks.map((link, i) => (
+      <div className={`fixed inset-0 z-40 bg-background/96 backdrop-blur-xl transition-opacity md:hidden ${menuOpen ? 'opacity-100' : 'pointer-events-none opacity-0'}`}>
+        <nav className="flex h-full flex-col items-center justify-center gap-5 px-8" aria-label="Mobile navigation">
+          {navLinks.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setMenuOpen(false)}
-              className={`text-3xl font-extrabold tracking-tight transition-all duration-200 ${
-                isActive(link.href) ? 'text-primary' : 'text-foreground hover:text-primary'
-              }`}
-              style={{ transitionDelay: menuOpen ? `${i * 60}ms` : '0ms' }}
+              className={`text-3xl font-extrabold tracking-tight ${isActive(link.href) ? 'text-primary' : 'text-foreground'}`}
             >
               {link.label}
             </Link>
@@ -113,9 +102,9 @@ export default function Header() {
           <Link
             href="/contact"
             onClick={() => setMenuOpen(false)}
-            className="mt-4 px-8 py-4 bg-primary text-primary-foreground rounded-full text-lg font-bold"
+            className="mt-4 rounded-full bg-primary px-8 py-4 text-lg font-bold text-primary-foreground"
           >
-            Build Your App
+            Start a project
           </Link>
         </nav>
       </div>

@@ -34,11 +34,11 @@ export default function SmartCartPrivacyContent() {
     <div className="pt-28 pb-20 px-6 md:px-10 bg-background">
       <div className="max-w-3xl mx-auto">
         <div className="mb-12">
-          <Link href="/apps" className="inline-flex items-center gap-2 text-sm font-bold text-primary mb-6 hover:underline">
+          <Link href="/smartcart" className="inline-flex items-center gap-2 text-sm font-bold text-primary mb-6 hover:underline">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
-            Back to Apps
+            Back to SmartCart
           </Link>
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-primary/20 mb-6">
             <span className="text-xs font-bold uppercase tracking-widest text-primary">SmartCart</span>
@@ -57,7 +57,7 @@ export default function SmartCartPrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              SmartCart is a mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, store, and share information when you use SmartCart on Android, iOS, or any supported platform.
+              SmartCart is a mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, store, and share information when you use SmartCart on Android, iOS, or any supported platform.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               Contact us at <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold">admin@cetiaapp.co.uk</a> if you have questions or privacy requests.
@@ -154,7 +154,7 @@ export default function SmartCartPrivacyContent() {
               <li><strong>Supermarket and price services:</strong> item names and lookup identifiers may be processed by server-side scraper services to find product prices.</li>
               <li><strong>Payment platforms:</strong> subscription purchases are handled by Google Play Billing or the relevant platform provider. We do not receive your full card details.</li>
               <li><strong>Legal and safety reasons:</strong> we may disclose information if required by law, to protect rights and safety, or to investigate misuse.</li>
-              <li><strong>Business transfers:</strong> if SmartCart or CetiaApps is reorganized, sold, or merged, information may transfer as part of that transaction, subject to this policy or a replacement policy.</li>
+              <li><strong>Business transfers:</strong> if SmartCart or Cetia Solutions is reorganized, sold, or merged, information may transfer as part of that transaction, subject to this policy or a replacement policy.</li>
               <li><strong>With your consent:</strong> we may share information when you ask us to or explicitly permit it.</li>
             </ul>
           </section>
@@ -236,7 +236,7 @@ export default function SmartCartPrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">12. International Transfers</h2>
             <p className="text-muted-foreground leading-relaxed">
-              CetiaApps is based in the United Kingdom, and our service providers may process information in the UK, European Economic Area, United States, or other countries. Where required, we rely on appropriate safeguards such as contractual protections, standard contractual clauses, or equivalent transfer mechanisms.
+              Cetia Solutions is based in the United Kingdom, and our service providers may process information in the UK, European Economic Area, United States, or other countries. Where required, we rely on appropriate safeguards such as contractual protections, standard contractual clauses, or equivalent transfer mechanisms.
             </p>
           </section>
 
@@ -255,7 +255,7 @@ export default function SmartCartPrivacyContent() {
             <div className="bg-secondary border border-primary/20 rounded-2xl p-6 space-y-3">
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Company:</span>
-                <span className="text-muted-foreground text-sm">CetiaApps</span>
+                <span className="text-muted-foreground text-sm">Cetia Solutions</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">App:</span>

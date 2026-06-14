@@ -1,30 +1,17 @@
 'use client';
+
 import React, { useState } from 'react';
+import Link from 'next/link';
+import { Bot, CheckCircle2, Cloud, Mail, MapPin, Smartphone } from 'lucide-react';
 
-const budgetOptions = [
-  'Under $10,000',
-  '$10,000 – $25,000',
-  '$25,000 – $50,000',
-  '$50,000 – $100,000',
-  '$100,000+',
-  'Not sure yet',
-];
-
-const timelineOptions = [
-  'ASAP (within 1 month)',
-  '1–3 months',
-  '3–6 months',
-  '6+ months',
-  'Just exploring',
-];
+const projectTypes = ['Mobile app', 'SaaS platform', 'AI agent or automation', 'SmartCart enquiry', 'Not sure yet'];
+const timelines = ['ASAP', '1-3 months', '3-6 months', '6+ months', 'Just exploring'];
 
 interface FormData {
   name: string;
   company: string;
   email: string;
-  phone: string;
   projectType: string;
-  budget: string;
   timeline: string;
   description: string;
 }
@@ -34,41 +21,34 @@ export default function ContactForm() {
     name: '',
     company: '',
     email: '',
-    phone: '',
     projectType: '',
-    budget: '',
     timeline: '',
     description: '',
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
-    setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = (event: React.FormEvent) => {
+    event.preventDefault();
     setLoading(true);
-    // Mock submit handler — connect to backend/email service here
     setTimeout(() => {
       setLoading(false);
       setSubmitted(true);
-    }, 1200);
+    }, 900);
   };
 
   if (submitted) {
     return (
-      <section className="py-24 px-6 md:px-10 bg-background">
-        <div className="max-w-2xl mx-auto text-center">
-          <div className="w-20 h-20 rounded-full bg-secondary flex items-center justify-center mx-auto mb-8">
-            <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5">
-              <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-            </svg>
-          </div>
-          <h2 className="text-4xl font-extrabold text-foreground mb-4">Message received!</h2>
-          <p className="text-xl text-muted-foreground leading-relaxed">
-            Thanks for reaching out. We&apos;ll review your project details and get back to you within one business day.
+      <section className="bg-background px-5 py-20 md:px-10">
+        <div className="mx-auto max-w-2xl rounded-[2rem] border border-border bg-card p-8 text-center shadow-sm">
+          <CheckCircle2 className="mx-auto mb-6 text-primary" size={48} />
+          <h2 className="text-3xl font-extrabold text-foreground">Message received.</h2>
+          <p className="mt-4 text-base leading-7 text-muted-foreground">
+            Thanks for reaching out. We will review your details and get back to you within one business day.
           </p>
         </div>
       </section>
@@ -76,254 +56,95 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="py-20 px-6 md:px-10 bg-background">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16">
-          {/* Form */}
-          <div className="lg:col-span-7">
-            <h2 className="text-3xl font-extrabold text-foreground mb-8">Tell us about your project</h2>
-            <form onSubmit={handleSubmit} className="space-y-6">
-              {/* Name + Company */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Full Name <span className="text-primary">*</span>
-                  </label>
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    value={form.name}
-                    onChange={handleChange}
-                    placeholder="Emma Johnson"
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Company / App Name
-                  </label>
-                  <input
-                    type="text"
-                    name="company"
-                    value={form.company}
-                    onChange={handleChange}
-                    placeholder="Acme Inc."
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium"
-                  />
-                </div>
-              </div>
-
-              {/* Email + Phone */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Email <span className="text-primary">*</span>
-                  </label>
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    value={form.email}
-                    onChange={handleChange}
-                    placeholder="emma@company.com"
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium"
-                  />
-                </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Phone
-                  </label>
-                  <input
-                    type="tel"
-                    name="phone"
-                    value={form.phone}
-                    onChange={handleChange}
-                    placeholder="+1 (555) 000-0000"
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium"
-                  />
-                </div>
-              </div>
-
-              {/* Budget + Timeline */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Budget Range <span className="text-primary">*</span>
-                  </label>
-                  <select
-                    name="budget"
-                    required
-                    value={form.budget}
-                    onChange={handleChange}
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium appearance-none cursor-pointer"
-                  >
-                    <option value="">Select budget</option>
-                    {budgetOptions.map(opt => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-                <div>
-                  <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                    Timeline
-                  </label>
-                  <select
-                    name="timeline"
-                    value={form.timeline}
-                    onChange={handleChange}
-                    suppressHydrationWarning
-                    className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium appearance-none cursor-pointer"
-                  >
-                    <option value="">Select timeline</option>
-                    {timelineOptions.map(opt => (
-                      <option key={opt} value={opt}>{opt}</option>
-                    ))}
-                  </select>
-                </div>
-              </div>
-
-              {/* Description */}
-              <div>
-                <label className="block text-xs font-bold uppercase tracking-widest text-muted-foreground mb-2">
-                  Project Description <span className="text-primary">*</span>
-                </label>
-                <textarea
-                  name="description"
-                  required
-                  suppressHydrationWarning
-                  value={form.description}
-                  onChange={handleChange}
-                  rows={6}
-                  placeholder="Tell us about your app idea — what problem it solves, who it's for, and any features you have in mind..."
-                  className="w-full px-4 py-3.5 rounded-xl border border-border bg-card text-foreground placeholder:text-muted-foreground focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all duration-200 text-sm font-medium resize-none"
-                />
-              </div>
-
-              <button
-                type="submit"
-                disabled={loading}
-                suppressHydrationWarning
-                className="w-full md:w-auto inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground rounded-full font-bold text-base hover:bg-secondary-foreground transition-all duration-300 hover:scale-105 disabled:opacity-60 disabled:cursor-not-allowed disabled:scale-100"
-              >
-                {loading ? (
-                  <>
-                    <svg className="animate-spin w-5 h-5" viewBox="0 0 24 24" fill="none">
-                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
-                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4z" />
-                    </svg>
-                    Sending...
-                  </>
-                ) : (
-                  <>
-                    Send Project Brief
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-                      <path d="M5 12h14M12 5l7 7-7 7" />
-                    </svg>
-                  </>
-                )}
-              </button>
-            </form>
-          </div>
-
-          {/* Sidebar */}
-          <div className="lg:col-span-5 space-y-6">
-            {/* Contact info */}
-            <div className="bg-card border border-border rounded-2xl p-8">
-              <h3 className="text-xl font-extrabold text-foreground mb-6">Contact Details</h3>
-              <div className="space-y-5">
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.8">
-                      <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Email</div>
-                    <a href="mailto:admin@cetiapp.co.uk" className="text-sm font-semibold text-foreground hover:text-primary transition-colors">admin@cetiapp.co.uk</a>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.8">
-                      <path d="M12 22s-8-4.5-8-11.8A8 8 0 0112 2a8 8 0 018 8.2c0 7.3-8 11.8-8 11.8z" />
-                      <circle cx="12" cy="10" r="3" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Location</div>
-                    <div className="text-sm font-semibold text-foreground">Remote-first · Worldwide</div>
-                  </div>
-                </div>
-                <div className="flex items-start gap-4">
-                  <div className="w-10 h-10 rounded-xl bg-secondary flex items-center justify-center flex-shrink-0">
-                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="1.8">
-                      <circle cx="12" cy="12" r="10" />
-                      <path d="M12 6v6l4 2" />
-                    </svg>
-                  </div>
-                  <div>
-                    <div className="text-xs font-bold uppercase tracking-widest text-muted-foreground mb-1">Response Time</div>
-                    <div className="text-sm font-semibold text-foreground">Within 1 business day</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Why us */}
-            <div className="bg-primary rounded-2xl p-8">
-              <h3 className="text-xl font-extrabold text-primary-foreground mb-6">Why CetiaApps?</h3>
-              <ul className="space-y-4">
-                {[
-                  'Fixed-price projects — no billing surprises',
-                  'Biweekly builds — you see progress constantly',
-                  '2 live apps proving our craft',
-                  'Full-stack: design + dev + launch',
-                  'Post-launch support included',
-                ].map((item) => (
-                  <li key={item} className="flex items-start gap-3 text-sm text-primary-foreground/80">
-                    <span className="w-5 h-5 rounded-full bg-accent flex-shrink-0 flex items-center justify-center mt-0.5">
-                      <svg width="10" height="10" viewBox="0 0 12 12" fill="none">
-                        <path d="M2 6l3 3 5-5" stroke="#1C1917" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-                      </svg>
-                    </span>
-                    {item}
-                  </li>
+    <section className="bg-card px-5 py-16 md:px-10 md:py-24">
+      <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
+        <form onSubmit={handleSubmit} className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+          <h2 className="mb-8 text-3xl font-extrabold text-foreground">Project brief</h2>
+          <div className="grid gap-5 md:grid-cols-2">
+            <label className="block">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">Full name</span>
+              <input name="name" required value={form.name} onChange={handleChange} className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15" />
+            </label>
+            <label className="block">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">Company</span>
+              <input name="company" value={form.company} onChange={handleChange} className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15" />
+            </label>
+            <label className="block">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">Email</span>
+              <input name="email" type="email" required value={form.email} onChange={handleChange} className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15" />
+            </label>
+            <label className="block">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">Project type</span>
+              <select name="projectType" required value={form.projectType} onChange={handleChange} className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15">
+                <option value="">Select a type</option>
+                {projectTypes.map((option) => (
+                  <option key={option} value={option}>{option}</option>
                 ))}
-              </ul>
-            </div>
+              </select>
+            </label>
+            <label className="block md:col-span-2">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">Timeline</span>
+              <select name="timeline" value={form.timeline} onChange={handleChange} className="w-full rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15">
+                <option value="">Select a timeline</option>
+                {timelines.map((option) => (
+                  <option key={option} value={option}>{option}</option>
+                ))}
+              </select>
+            </label>
+            <label className="block md:col-span-2">
+              <span className="mb-2 block text-xs font-extrabold uppercase tracking-widest text-muted-foreground">What are you trying to build?</span>
+              <textarea name="description" required rows={7} value={form.description} onChange={handleChange} className="w-full resize-none rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15" />
+            </label>
+          </div>
+          <button type="submit" disabled={loading} className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-full bg-primary px-7 text-sm font-extrabold text-primary-foreground transition-colors hover:bg-teal-800 disabled:opacity-60">
+            {loading ? 'Sending...' : 'Send project brief'}
+          </button>
+        </form>
 
-            {/* Apps quick links */}
-            <div className="bg-muted border border-border rounded-2xl p-8">
-              <h3 className="text-sm font-extrabold uppercase tracking-widest text-muted-foreground mb-4">Our Apps</h3>
-              <div className="space-y-3">
-                <a href="/apps#smartrecipe" className="flex items-center justify-between p-4 bg-card rounded-xl border border-border hover:border-primary transition-colors group">
-                  <div>
-                    <div className="font-bold text-foreground text-sm">SmartRecipe</div>
-                    <div className="text-xs text-muted-foreground">AI-powered cooking app</div>
+        <aside className="space-y-5">
+          <div className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+            <h2 className="mb-5 text-2xl font-extrabold text-foreground">What Cetia Solutions can help with</h2>
+            <div className="grid gap-4">
+              {[
+                [Smartphone, 'Mobile app development'],
+                [Cloud, 'SaaS product development'],
+                [Bot, 'AI agent consulting and workflows'],
+              ].map(([Icon, label]) => {
+                const TypedIcon = Icon as typeof Smartphone;
+                return (
+                  <div key={label as string} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4">
+                    <TypedIcon className="text-primary" size={22} />
+                    <span className="text-sm font-extrabold text-foreground">{label as string}</span>
                   </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#7C3AED" strokeWidth="2.5" className="opacity-0 group-hover:opacity-100 transition-opacity">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-                <a href="/apps#milo" className="flex items-center justify-between p-4 bg-card rounded-xl border border-border hover:border-milo transition-colors group">
-                  <div>
-                    <div className="font-bold text-foreground text-sm">Milo</div>
-                    <div className="text-xs text-muted-foreground">Complete pet care companion</div>
-                  </div>
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" strokeWidth="2.5" className="opacity-0 group-hover:opacity-100 transition-opacity">
-                    <path d="M5 12h14M12 5l7 7-7 7" />
-                  </svg>
-                </a>
-              </div>
+                );
+              })}
             </div>
           </div>
-        </div>
+
+          <div className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+            <h2 className="mb-5 text-2xl font-extrabold text-foreground">Contact details</h2>
+            <div className="space-y-4 text-sm font-semibold text-muted-foreground">
+              <a href="mailto:admin@cetiaapp.co.uk" className="flex items-center gap-3 transition-colors hover:text-primary">
+                <Mail size={20} className="text-primary" />
+                admin@cetiaapp.co.uk
+              </a>
+              <p className="flex items-center gap-3">
+                <MapPin size={20} className="text-primary" />
+                UK based, remote-first
+              </p>
+            </div>
+          </div>
+
+          <div className="rounded-[2rem] bg-purple-dark p-6 text-white shadow-xl shadow-teal-900/10 md:p-8">
+            <h2 className="text-2xl font-extrabold">Want to see a live product?</h2>
+            <p className="mt-3 text-sm leading-6 text-teal-50">
+              SmartCart is Cetia Solutions' grocery price comparison app for UK shoppers.
+            </p>
+            <Link href="/smartcart" className="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-white px-5 text-sm font-extrabold text-primary">
+              View SmartCart
+            </Link>
+          </div>
+        </aside>
       </div>
     </section>
   );

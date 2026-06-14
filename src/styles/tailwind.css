@@ -3,28 +3,28 @@
 @tailwind utilities;
 
 :root {
-  --background: #FAFAF9;
-  --foreground: #1C1917;
-  --primary: #7C3AED;
+  --background: #F7FCFC;
+  --foreground: #102A35;
+  --primary: #0F766E;
   --primary-foreground: #FFFFFF;
-  --secondary: #F3F0FF;
-  --secondary-foreground: #4C1D95;
-  --accent: #DFFF5C;
-  --accent-foreground: #1C1917;
-  --muted: #F5F3F0;
-  --muted-foreground: #78716C;
+  --secondary: #E6FFFA;
+  --secondary-foreground: #115E59;
+  --accent: #7C3AED;
+  --accent-foreground: #FFFFFF;
+  --muted: #EAF4F4;
+  --muted-foreground: #5D7280;
   --card: #FFFFFF;
-  --card-foreground: #1C1917;
-  --border: #E7E5E4;
-  --input: #E7E5E4;
-  --ring: #7C3AED;
+  --card-foreground: #102A35;
+  --border: #D7E7E8;
+  --input: #D7E7E8;
+  --ring: #14B8A6;
   --radius: 1rem;
   --font-sans: var(--font-plus-jakarta-sans), sans-serif;
 
   /* App brand colors */
-  --smartrecipe: #7C3AED;
-  --milo: #059669;
-  --milo-light: #D1FAE5;
+  --smartcart: #0F766E;
+  --turquoise: #14B8A6;
+  --purple: #7C3AED;
 }
 
 @layer base {
@@ -85,7 +85,7 @@
   }
   .hover-lift:hover {
     transform: translateY(-6px);
-    box-shadow: 0 20px 40px rgba(124, 58, 237, 0.15);
+    box-shadow: 0 20px 40px rgba(15, 118, 110, 0.14);
   }
 
   /* Phone mockup tilt */
@@ -117,7 +117,7 @@
 
   /* Text gradient */
   .text-gradient-purple {
-    background: linear-gradient(135deg, #7C3AED 0%, #A855F7 50%, #C084FC 100%);
+    background: linear-gradient(135deg, #0F766E 0%, #14B8A6 48%, #7C3AED 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -147,8 +147,8 @@
 
   /* Pulse glow */
   @keyframes pulse-glow {
-    0%, 100% { box-shadow: 0 0 20px rgba(124, 58, 237, 0.3); }
-    50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.6); }
+    0%, 100% { box-shadow: 0 0 20px rgba(20, 184, 166, 0.26); }
+    50% { box-shadow: 0 0 40px rgba(124, 58, 237, 0.28); }
   }
   .pulse-glow {
     animation: pulse-glow 3s ease-in-out infinite;
@@ -173,10 +173,10 @@
   .phone-frame {
     border-radius: 2.5rem;
     box-shadow: 
-      0 0 0 2px rgba(124, 58, 237, 0.2),
-      0 0 0 8px rgba(124, 58, 237, 0.08),
+      0 0 0 2px rgba(15, 118, 110, 0.18),
+      0 0 0 8px rgba(20, 184, 166, 0.08),
       0 30px 60px rgba(0, 0, 0, 0.2),
-      0 10px 20px rgba(124, 58, 237, 0.15);
+      0 10px 20px rgba(15, 118, 110, 0.12);
   }
 
   /* Section divider */
@@ -202,7 +202,7 @@
 
   /* Purple dark section */
   .bg-purple-dark {
-    background: linear-gradient(135deg, #2E1065 0%, #4C1D95 40%, #3B0764 100%);
+    background: linear-gradient(135deg, #0F766E 0%, #115E59 50%, #4C1D95 100%);
   }
 
   /* App badge pill */
@@ -218,9 +218,7 @@
     text-transform: uppercase;
   }
 
-  /* Milo green */
-  .text-milo { color: #059669; }
-  .bg-milo { background-color: #059669; }
-  .bg-milo-light { background-color: #D1FAE5; }
-  .border-milo { border-color: #059669; }
+  .text-turquoise { color: #14B8A6; }
+  .bg-turquoise { background-color: #14B8A6; }
+  .border-turquoise { border-color: #14B8A6; }
 }

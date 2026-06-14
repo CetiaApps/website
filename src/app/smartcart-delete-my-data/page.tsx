@@ -1,4 +1,5 @@
 import React from 'react';
+import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
@@ -12,6 +13,12 @@ const steps = [
   'Send the ticket and watch the email linked to your SmartCart account in case we need to verify the request.',
 ];
 
+export const metadata: Metadata = {
+  title: 'SmartCart Delete my Data',
+  description:
+    'How SmartCart users can request account and personal data deletion under UK GDPR and data protection rights.',
+};
+
 export default function SmartCartDeleteMyDataPage() {
   return (
     <>
@@ -19,11 +26,11 @@ export default function SmartCartDeleteMyDataPage() {
       <main className="pt-28 pb-20 px-6 md:px-10 bg-background">
         <div className="max-w-3xl mx-auto">
           <div className="mb-12">
-            <Link href="/smartcart-privacy-policy" className="inline-flex items-center gap-2 text-sm font-bold text-primary mb-6 hover:underline">
+            <Link href="/smartcart" className="inline-flex items-center gap-2 text-sm font-bold text-primary mb-6 hover:underline">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                 <path d="M19 12H5M12 19l-7-7 7-7" />
               </svg>
-              Back to SmartCart Privacy Policy
+              Back to SmartCart
             </Link>
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-primary/20 mb-6">
               <span className="text-xs font-bold uppercase tracking-widest text-primary">SmartCart</span>
@@ -37,7 +44,7 @@ export default function SmartCartDeleteMyDataPage() {
           <div className="prose prose-stone max-w-none">
             <div className="bg-secondary border border-primary/20 rounded-2xl p-6 mb-10">
               <p className="text-sm text-foreground leading-relaxed">
-                <strong>Summary:</strong> You can ask CetiaApps to delete the personal data associated with your SmartCart account by raising a support ticket inside the SmartCart app. Once we receive and verify your request, we aim to remove all personal data within 14 days.
+                <strong>Summary:</strong> You can ask Cetia Solutions to delete the personal data associated with your SmartCart account by raising a support ticket inside the SmartCart app. Once we receive and verify your request, we aim to remove all personal data within 14 days.
               </p>
             </div>
 
