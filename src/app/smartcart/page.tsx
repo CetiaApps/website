@@ -2,11 +2,12 @@ import React from 'react';
 import type { Metadata } from 'next';
 import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowRight, CheckCircle2, ListChecks, MapPin, PoundSterling, Search, ShoppingCart } from 'lucide-react';
+import { CheckCircle2, ListChecks, MapPin, PoundSterling, Search, ShoppingCart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 
 const playStoreUrl = 'https://play.google.com/store/apps/details?id=smartcart.cetia.app';
+const promoVideoUrl = 'https://www.youtube.com/embed/kSl8CLXD9EM';
 
 export const metadata: Metadata = {
   title: 'SmartCart Grocery Price Comparison App',
@@ -31,6 +32,29 @@ const steps = [
 
 const screenshots = [2, 3, 4, 5, 7, 8, 9, 10];
 
+function GooglePlayBadge({ className = '' }: { className?: string }) {
+  return (
+    <Link
+      href={playStoreUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Get SmartCart on Google Play"
+      className={`inline-flex min-h-[58px] min-w-[196px] items-center justify-center gap-3 rounded-xl bg-black px-5 py-3 text-white shadow-lg shadow-teal-900/15 transition-transform hover:-translate-y-0.5 ${className}`}
+    >
+      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true" className="shrink-0">
+        <path fill="#00F0FF" d="M1.1 1.4c-.5.4-.8 1.1-.8 2v27.2c0 .9.3 1.6.8 2l14.7-15.6L1.1 1.4Z" />
+        <path fill="#00D084" d="m20.5 11.9-4.7 5 4.7 5 6-3.4c1.9-1.1 1.9-3 0-4.1l-6-2.5Z" />
+        <path fill="#FFD43B" d="m1.1 1.4 19.4 10.5-4.7 5L1.1 1.4Z" />
+        <path fill="#FF4F6D" d="m1.1 32.6 19.4-10.7-4.7-5L1.1 32.6Z" />
+      </svg>
+      <span className="text-left leading-none">
+        <span className="block text-[10px] font-bold uppercase tracking-wide">Get it on</span>
+        <span className="mt-1 block text-xl font-extrabold tracking-tight">Google Play</span>
+      </span>
+    </Link>
+  );
+}
+
 export default function SmartCartPage() {
   return (
     <>
@@ -53,9 +77,7 @@ export default function SmartCartPage() {
                 SmartCart helps UK shoppers create shopping lists, compare grocery prices and find better value across major supermarkets.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground">
-                  Get it on Google Play <ArrowRight size={18} />
-                </Link>
+                <GooglePlayBadge />
                 <Link href="/smartcart-privacy-policy" className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground">
                   Privacy Policy
                 </Link>
@@ -70,6 +92,33 @@ export default function SmartCartPage() {
                 </div>
                 <div className="phone-frame relative hidden h-[520px] w-[260px] overflow-hidden bg-card sm:block">
                   <Image src="/assets/images/smartcart-screen-05.png" alt="SmartCart nearest supermarkets screenshot" fill sizes="260px" className="object-cover" priority />
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-card py-16 md:py-24">
+          <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-10">
+            <div>
+              <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Promo video</p>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">See SmartCart in action.</h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+                Watch a quick SmartCart preview showing how the app helps shoppers compare prices and plan a better weekly shop.
+              </p>
+              <GooglePlayBadge className="mt-8" />
+            </div>
+            <div className="mx-auto w-full max-w-[360px]">
+              <div className="overflow-hidden rounded-[2rem] border border-border bg-background shadow-2xl shadow-teal-900/12">
+                <div className="relative aspect-[9/16] w-full">
+                  <iframe
+                    src={promoVideoUrl}
+                    title="SmartCart promo video"
+                    className="absolute inset-0 h-full w-full"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
               </div>
             </div>
@@ -144,9 +193,7 @@ export default function SmartCartPage() {
                 <Link href="/smartcart-delete-my-data" className="underline underline-offset-4">Delete my Data</Link>
               </div>
             </div>
-            <Link href={playStoreUrl} target="_blank" rel="noopener noreferrer" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-white px-6 text-sm font-extrabold text-primary">
-              Get it on Google Play <ArrowRight size={18} />
-            </Link>
+            <GooglePlayBadge className="bg-black" />
           </div>
         </section>
       </main>
