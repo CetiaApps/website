@@ -5,8 +5,8 @@ import Link from 'next/link';
 import { CheckCircle2, ListChecks, MapPin, PoundSterling, Search, ShoppingCart } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import GooglePlayBadge from '@/components/GooglePlayBadge';
 
-const playStoreUrl = 'https://play.google.com/store/apps/details?id=smartcart.cetia.app';
 const promoVideoUrl = 'https://www.youtube.com/embed/kSl8CLXD9EM';
 
 export const metadata: Metadata = {
@@ -31,29 +31,6 @@ const steps = [
 ];
 
 const screenshots = [2, 3, 4, 5, 7, 8, 9, 10];
-
-function GooglePlayBadge({ className = '' }: { className?: string }) {
-  return (
-    <Link
-      href={playStoreUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label="Get SmartCart on Google Play"
-      className={`inline-flex min-h-[58px] min-w-[196px] items-center justify-center gap-3 rounded-xl bg-black px-5 py-3 text-white shadow-lg shadow-teal-900/15 transition-transform hover:-translate-y-0.5 ${className}`}
-    >
-      <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true" className="shrink-0">
-        <path fill="#00F0FF" d="M1.1 1.4c-.5.4-.8 1.1-.8 2v27.2c0 .9.3 1.6.8 2l14.7-15.6L1.1 1.4Z" />
-        <path fill="#00D084" d="m20.5 11.9-4.7 5 4.7 5 6-3.4c1.9-1.1 1.9-3 0-4.1l-6-2.5Z" />
-        <path fill="#FFD43B" d="m1.1 1.4 19.4 10.5-4.7 5L1.1 1.4Z" />
-        <path fill="#FF4F6D" d="m1.1 32.6 19.4-10.7-4.7-5L1.1 32.6Z" />
-      </svg>
-      <span className="text-left leading-none">
-        <span className="block text-[10px] font-bold uppercase tracking-wide">Get it on</span>
-        <span className="mt-1 block text-xl font-extrabold tracking-tight">Google Play</span>
-      </span>
-    </Link>
-  );
-}
 
 export default function SmartCartPage() {
   return (

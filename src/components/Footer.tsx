@@ -10,7 +10,10 @@ const services = [
 
 const smartCart = [
   { label: 'SmartCart overview', href: '/smartcart' },
-  { label: 'Google Play', href: 'https://play.google.com/store/apps/details?id=smartcart.cetia.app' },
+  {
+    label: 'Google Play',
+    href: 'https://play.google.com/store/apps/details?id=smartcart.cetia.app&utm_source=cetia_website&utm_medium=button&utm_campaign=smartcart_launch',
+  },
 ];
 
 const legal = [
