@@ -108,7 +108,7 @@ export default function SmartCartDeleteMyDataPage() {
             <section className="mb-10">
               <h2 className="text-2xl font-extrabold text-foreground mb-4">Need Help?</h2>
               <p className="text-muted-foreground leading-relaxed">
-                The preferred method is to raise a SmartCart support ticket inside the app. You can also contact us at <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold hover:underline">admin@cetiaapp.co.uk</a> if you cannot access your account.
+                The preferred method is to raise a SmartCart support ticket inside the app. You can also contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold hover:underline">contact@cetia-solutions.co.uk</a> if you cannot access your account.
               </p>
             </section>
           </div>
@@ -118,3 +118,4 @@ export default function SmartCartDeleteMyDataPage() {
     </>
   );
 }
+

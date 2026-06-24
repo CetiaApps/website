@@ -30,7 +30,13 @@ const steps = [
   ['Shop cheapest', 'Use the results to choose the store or item combination that works for you.'],
 ];
 
-const screenshots = [2, 3, 4, 5, 7, 8, 9, 10];
+const carouselScreenshots = [
+  { screen: 2, className: 'z-10 hidden translate-x-12 scale-75 rotate-[-13deg] opacity-70 md:block' },
+  { screen: 3, className: 'z-20 hidden translate-x-6 scale-90 rotate-[-7deg] opacity-90 sm:block' },
+  { screen: 4, className: 'z-30 scale-95 md:scale-100' },
+  { screen: 5, className: 'z-20 hidden -translate-x-6 scale-90 rotate-[7deg] opacity-90 sm:block' },
+  { screen: 7, className: 'z-10 hidden -translate-x-12 scale-75 rotate-[13deg] opacity-70 md:block' },
+];
 
 export default function SmartCartPage() {
   return (
@@ -127,15 +133,37 @@ export default function SmartCartPage() {
 
         <section className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-5 md:px-10">
-            <div className="mb-10 max-w-3xl">
+            <div className="mx-auto mb-12 max-w-3xl text-center">
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Screenshots</p>
               <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">A closer look inside SmartCart.</h2>
             </div>
-            <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
-              {screenshots.map((screen) => (
-                <div key={screen} className="phone-frame relative mx-auto h-[520px] w-full max-w-[260px] overflow-hidden bg-card">
-                  <Image src={`/assets/images/smartcart-screen-${String(screen).padStart(2, '0')}.png`} alt={`SmartCart screenshot ${screen}`} fill sizes="260px" className="object-cover" />
-                </div>
+            <div className="relative mx-auto flex min-h-[580px] max-w-6xl items-center justify-center overflow-hidden rounded-[2rem] border border-border bg-card px-4 py-10 shadow-2xl shadow-teal-900/10 [perspective:1400px]">
+              <div className="absolute inset-0 bg-[linear-gradient(110deg,rgba(20,184,166,0.12),rgba(124,58,237,0.08)_50%,rgba(255,255,255,0))]" />
+              <div className="relative flex w-full items-center justify-center -space-x-16 sm:-space-x-20 md:-space-x-24">
+                {carouselScreenshots.map(({ screen, className }) => (
+                  <div
+                    key={screen}
+                    className={`phone-frame relative h-[500px] w-[250px] shrink-0 overflow-hidden bg-card transition-transform duration-300 ${className}`}
+                    style={{ transformStyle: 'preserve-3d' }}
+                  >
+                    <Image
+                      src={`/assets/images/smartcart-screen-${String(screen).padStart(2, '0')}.png`}
+                      alt={`SmartCart screenshot ${screen}`}
+                      fill
+                      sizes="250px"
+                      className="object-cover"
+                    />
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="mt-6 flex justify-center gap-2">
+              {carouselScreenshots.map(({ screen }, index) => (
+                <div
+                  key={screen}
+                  className={`h-2 rounded-full ${index === 2 ? 'w-8 bg-primary' : 'w-2 bg-border'}`}
+                  aria-hidden="true"
+                />
               ))}
             </div>
           </div>

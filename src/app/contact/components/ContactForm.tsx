@@ -27,18 +27,34 @@ export default function ContactForm() {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState('');
 
   const handleChange = (event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setForm((current) => ({ ...current, [event.target.name]: event.target.value }));
   };
 
-  const handleSubmit = (event: React.FormEvent) => {
+  const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
+    setError('');
+
+    try {
+      const response = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      });
+
+      if (!response.ok) {
+        throw new Error('Contact submission failed.');
+      }
+
       setSubmitted(true);
-    }, 900);
+    } catch {
+      setError('Sorry, we could not send your message. Please email contact@cetia-solutions.co.uk.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (submitted) {
@@ -99,6 +115,11 @@ export default function ContactForm() {
           <button type="submit" disabled={loading} className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-full bg-primary px-7 text-sm font-extrabold text-primary-foreground transition-colors hover:bg-teal-800 disabled:opacity-60">
             {loading ? 'Sending...' : 'Send project brief'}
           </button>
+          {error ? (
+            <p className="mt-4 rounded-xl border border-red-200 bg-red-50 px-4 py-3 text-sm font-semibold text-red-700">
+              {error}
+            </p>
+          ) : null}
         </form>
 
         <aside className="space-y-5">
@@ -124,9 +145,9 @@ export default function ContactForm() {
           <div className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
             <h2 className="mb-5 text-2xl font-extrabold text-foreground">Contact details</h2>
             <div className="space-y-4 text-sm font-semibold text-muted-foreground">
-              <a href="mailto:admin@cetiaapp.co.uk" className="flex items-center gap-3 transition-colors hover:text-primary">
+              <a href="mailto:contact@cetia-solutions.co.uk" className="flex items-center gap-3 transition-colors hover:text-primary">
                 <Mail size={20} className="text-primary" />
-                admin@cetiaapp.co.uk
+                contact@cetia-solutions.co.uk
               </a>
               <p className="flex items-center gap-3">
                 <MapPin size={20} className="text-primary" />
@@ -149,3 +170,4 @@ export default function ContactForm() {
     </section>
   );
 }
+

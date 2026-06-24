@@ -68,8 +68,8 @@ export default function DataDeletionForm() {
           </p>
           <p className="text-sm text-muted-foreground mb-8">
             If you have any questions in the meantime, email us at{' '}
-            <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold hover:underline">
-              admin@cetiapp.co.uk
+            <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold hover:underline">
+              contact@cetia-solutions.co.uk
             </a>
           </p>
           <Link
@@ -293,13 +293,13 @@ export default function DataDeletionForm() {
                 If you have questions about your data or this process, contact our privacy team directly.
               </p>
               <a
-                href="mailto:admin@cetiapp.co.uk"
+                href="mailto:contact@cetia-solutions.co.uk"
                 className="inline-flex items-center gap-2 text-sm font-semibold text-primary hover:underline"
               >
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                 </svg>
-                admin@cetiapp.co.uk
+                contact@cetia-solutions.co.uk
               </a>
               <div className="mt-4 pt-4 border-t border-border">
                 <Link
@@ -319,3 +319,4 @@ export default function DataDeletionForm() {
     </section>
   );
 }
+

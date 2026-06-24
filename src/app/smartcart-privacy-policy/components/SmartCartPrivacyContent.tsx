@@ -60,7 +60,7 @@ export default function SmartCartPrivacyContent() {
               SmartCart is a mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, store, and share information when you use SmartCart on Android, iOS, or any supported platform.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Contact us at <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold">admin@cetiaapp.co.uk</a> if you have questions or privacy requests.
+              Contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a> if you have questions or privacy requests.
             </p>
           </section>
 
@@ -222,7 +222,7 @@ export default function SmartCartPrivacyContent() {
               <li>Complain to a data protection authority, such as the UK Information Commissioner&apos;s Office.</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              To request deletion, open SmartCart, go to Account settings, choose Help & support, tap Create support ticket, and ask for data deletion. You can find the full instructions on our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>. You can also email <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold">admin@cetiaapp.co.uk</a>. We aim to respond to support and privacy requests within 30 days unless a shorter or longer period is required by law.
+              To request deletion, open SmartCart, go to Account settings, choose Help & support, tap Create support ticket, and ask for data deletion. You can find the full instructions on our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>. You can also email <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a>. We aim to respond to support and privacy requests within 30 days unless a shorter or longer period is required by law.
             </p>
           </section>
 
@@ -263,7 +263,7 @@ export default function SmartCartPrivacyContent() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Email:</span>
-                <a href="mailto:admin@cetiaapp.co.uk" className="text-primary font-semibold text-sm hover:underline">admin@cetiaapp.co.uk</a>
+                <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold text-sm hover:underline">contact@cetia-solutions.co.uk</a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Response:</span>
@@ -276,3 +276,4 @@ export default function SmartCartPrivacyContent() {
     </div>
   );
 }
+

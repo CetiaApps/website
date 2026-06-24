@@ -171,12 +171,48 @@
 
   /* Phone frame */
   .phone-frame {
-    border-radius: 2.5rem;
+    position: relative;
+    border: 10px solid #101820;
+    outline: 1px solid rgba(255, 255, 255, 0.35);
+    border-radius: 2.35rem;
+    background: #101820;
     box-shadow: 
-      0 0 0 2px rgba(15, 118, 110, 0.18),
-      0 0 0 8px rgba(20, 184, 166, 0.08),
-      0 30px 60px rgba(0, 0, 0, 0.2),
-      0 10px 20px rgba(15, 118, 110, 0.12);
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+      inset 0 0 18px rgba(255, 255, 255, 0.04),
+      0 24px 60px rgba(16, 24, 32, 0.28),
+      0 10px 22px rgba(15, 118, 110, 0.14);
+  }
+
+  .phone-frame::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 9px;
+    z-index: 3;
+    width: 34%;
+    max-width: 92px;
+    height: 24px;
+    transform: translateX(-50%);
+    border-radius: 9999px;
+    background: #05080A;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .phone-frame::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    pointer-events: none;
+    border-radius: 1.65rem;
+    box-shadow:
+      inset 12px 0 18px rgba(255, 255, 255, 0.06),
+      inset -10px 0 18px rgba(0, 0, 0, 0.18),
+      inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  }
+
+  .phone-frame img {
+    border-radius: 1.55rem;
   }
 
   /* Section divider */

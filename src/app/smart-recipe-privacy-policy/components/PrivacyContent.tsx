@@ -25,7 +25,7 @@ export default function PrivacyContent() {
             <p className="text-sm text-foreground leading-relaxed">
               <strong>Summary:</strong> SmartRecipe collects only the data necessary to deliver personalized recipe recommendations. We do not sell your personal data to third parties. You can request deletion of your data at any time via our{' '}
               <Link href="/smartrecipe-data-deletion" className="text-primary font-semibold hover:underline">data deletion request form</Link>{' '}
-              or by contacting us at <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold">admin@cetiapp.co.uk</a>.
+              or by contacting us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a>.
             </p>
           </div>
 
@@ -35,7 +35,7 @@ export default function PrivacyContent() {
               SmartRecipe is a mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the SmartRecipe mobile application available on Android.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              If you have questions about this policy, please contact us at <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold">admin@cetiapp.co.uk</a>.
+              If you have questions about this policy, please contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a>.
             </p>
           </section>
 
@@ -128,14 +128,14 @@ export default function PrivacyContent() {
               <li><strong>Opt-out of notifications:</strong> Disable push notifications at any time in your device settings or app preferences.</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              To exercise any of these rights, email us at <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold">admin@cetiapp.co.uk</a>. We will respond within 30 days.
+              To exercise any of these rights, email us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a>. We will respond within 30 days.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">8. Children&apos;s Privacy</h2>
             <p className="text-muted-foreground leading-relaxed">
-              SmartRecipe is not directed to children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately at <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold">admin@cetiapp.co.uk</a> and we will delete such information promptly.
+              SmartRecipe is not directed to children under the age of 13 (or 16 in the European Economic Area). We do not knowingly collect personal information from children. If you believe we have inadvertently collected information from a child, please contact us immediately at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a> and we will delete such information promptly.
             </p>
           </section>
 
@@ -200,7 +200,7 @@ export default function PrivacyContent() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Email:</span>
-                <a href="mailto:admin@cetiapp.co.uk" className="text-primary font-semibold text-sm hover:underline">admin@cetiapp.co.uk</a>
+                <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold text-sm hover:underline">contact@cetia-solutions.co.uk</a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Response:</span>
