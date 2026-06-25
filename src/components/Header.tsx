@@ -10,6 +10,7 @@ const navLinks = [
   { label: 'Home', href: '/' },
   { label: 'Services', href: '/services' },
   { label: 'SmartCart', href: '/smartcart' },
+  { label: 'Guides', href: '/blog' },
   { label: 'Contact', href: '/contact' },
 ];
 

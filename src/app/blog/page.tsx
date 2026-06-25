@@ -27,7 +27,7 @@ export default function BlogIndexPage() {
             <div className="max-w-4xl">
               <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart guides</p>
               <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
-                SmartCart Grocery Shopping Guides
+                SmartCart grocery shopping guides
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
                 Practical guides for UK shoppers on comparing supermarket prices, building smarter shopping lists, and planning grocery shops with SmartCart.

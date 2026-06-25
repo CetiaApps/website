@@ -10,6 +10,7 @@ export type BlogPost = {
   description: string;
   excerpt: string;
   cta: string;
+  relatedSlugs: string[];
   sections: BlogSection[];
 };
 
@@ -22,6 +23,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A practical guide to comparing supermarket prices before leaving home, with shopping lists, product checks and nearby store planning.',
     cta: 'Compare grocery prices with SmartCart',
+    relatedSlugs: ['find-cheapest-supermarket-shopping-list', 'save-money-weekly-grocery-shop-uk'],
     sections: [
       {
         heading: 'Why comparing supermarket prices matters',
@@ -70,6 +72,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Simple ways to plan your weekly grocery shop, compare prices and make more informed decisions before you shop.',
     cta: 'Start planning your grocery shop with SmartCart',
+    relatedSlugs: ['how-to-compare-supermarket-prices-uk', 'smarter-grocery-shopping-list'],
     sections: [
       {
         heading: 'Make a list before you shop',
@@ -117,6 +120,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A plain-English explanation of grocery price comparison apps and how they differ from basic shopping list tools.',
     cta: 'Explore SmartCart',
+    relatedSlugs: ['shopping-list-app-vs-grocery-price-comparison-app', 'smartcart-uk-grocery-price-comparison-app'],
     sections: [
       {
         heading: 'Why grocery price comparison is useful',
@@ -162,6 +166,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Why the cheaper supermarket can depend on your basket, location and the individual products you need.',
     cta: 'Compare your shopping list with SmartCart',
+    relatedSlugs: ['how-to-compare-supermarket-prices-uk', 'compare-grocery-prices-before-shopping'],
     sections: [
       {
         heading: 'The cheapest supermarket can depend on your basket',
@@ -201,6 +206,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A shopping list app helps you remember what to buy. A grocery price comparison app helps you decide where and how to buy it.',
     cta: 'Try SmartCart',
+    relatedSlugs: ['what-is-grocery-price-comparison-app', 'smarter-grocery-shopping-list'],
     sections: [
       {
         heading: 'What a normal shopping list app does',
@@ -241,6 +247,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Comparing prices before leaving home gives shoppers more control before they commit to one store.',
     cta: 'Compare prices before you shop',
+    relatedSlugs: ['how-to-compare-supermarket-prices-uk', 'supermarket-price-comparison-uk-shoppers'],
     sections: [
       {
         heading: 'Planning helps you avoid rushed decisions',
@@ -280,6 +287,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'How families can use SmartCart to organise the weekly food shop, compare products and plan around nearby supermarkets.',
     cta: 'Plan your weekly grocery shop with SmartCart',
+    relatedSlugs: ['save-money-weekly-grocery-shop-uk', 'smarter-grocery-shopping-list'],
     sections: [
       {
         heading: 'Build your grocery list in one place',
@@ -319,6 +327,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'A grocery shopping list can do more than remind you what to buy. It can help you compare prices and plan where to shop.',
     cta: 'Build a smarter shopping list with SmartCart',
+    relatedSlugs: ['shopping-list-app-vs-grocery-price-comparison-app', 'smartcart-weekly-food-shop-families'],
     sections: [
       {
         heading: 'Start with what you need',
@@ -358,6 +367,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'Why comparing supermarket prices is becoming a more useful habit for shoppers planning weekly groceries.',
     cta: 'Explore SmartCart',
+    relatedSlugs: ['compare-grocery-prices-before-shopping', 'what-is-grocery-price-comparison-app'],
     sections: [
       {
         heading: 'Prices are not always the same across stores',
@@ -398,6 +408,7 @@ export const blogPosts: BlogPost[] = [
     excerpt:
       'An overview of SmartCart, the UK grocery price comparison app built for everyday supermarket decisions.',
     cta: 'Get SmartCart on Google Play',
+    relatedSlugs: ['what-is-grocery-price-comparison-app', 'how-to-compare-supermarket-prices-uk'],
     sections: [
       {
         heading: 'What SmartCart does',
@@ -439,8 +450,9 @@ export const blogPosts: BlogPost[] = [
 export const featuredBlogPosts = [
   'how-to-compare-supermarket-prices-uk',
   'save-money-weekly-grocery-shop-uk',
-  'what-is-grocery-price-comparison-app',
   'find-cheapest-supermarket-shopping-list',
+  'shopping-list-app-vs-grocery-price-comparison-app',
+  'smartcart-uk-grocery-price-comparison-app',
 ];
 
 export function getBlogPost(slug: string) {

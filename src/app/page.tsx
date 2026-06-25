@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { ArrowRight, Bot, CheckCircle2, Cloud, Rocket, Smartphone } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import { blogPosts, type BlogPost } from '@/app/blog/posts';
 
 export const metadata: Metadata = {
   title: 'Build Smarter Apps, SaaS Platforms and AI Agents',
@@ -38,6 +39,16 @@ const reasons = [
 ];
 
 const process = ['Discover', 'Design', 'Build', 'Launch', 'Improve'];
+
+const homeGuideSlugs = [
+  'how-to-compare-supermarket-prices-uk',
+  'save-money-weekly-grocery-shop-uk',
+  'smartcart-uk-grocery-price-comparison-app',
+];
+
+const homeGuides = homeGuideSlugs
+  .map((slug) => blogPosts.find((post) => post.slug === slug))
+  .filter((post): post is BlogPost => Boolean(post));
 
 export default function HomePage() {
   return (
@@ -160,6 +171,34 @@ export default function HomePage() {
                 <div key={screen} className="phone-frame relative h-[440px] min-w-[220px] overflow-hidden bg-card">
                   <Image src={`/assets/images/smartcart-screen-${String(screen).padStart(2, '0')}.png`} alt={`SmartCart app screenshot ${screen}`} fill sizes="220px" className="object-cover" />
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-background py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 md:px-10">
+            <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
+              <div className="max-w-3xl">
+                <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart guides</p>
+                <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Grocery shopping guides</h2>
+                <p className="mt-5 text-base leading-7 text-muted-foreground">
+                  Helpful SmartCart guides for comparing supermarket prices and planning your weekly shop.
+                </p>
+              </div>
+              <Link href="/blog" className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground transition-colors hover:border-primary hover:text-primary">
+                View all guides
+              </Link>
+            </div>
+            <div className="grid gap-5 md:grid-cols-3">
+              {homeGuides.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-primary/40">
+                  <h3 className="text-xl font-extrabold leading-tight text-foreground">{post.title}</h3>
+                  <p className="mt-4 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
+                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-primary">
+                    Read guide <ArrowRight size={16} />
+                  </span>
+                </Link>
               ))}
             </div>
           </div>

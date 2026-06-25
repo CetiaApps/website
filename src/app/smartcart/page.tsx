@@ -199,16 +199,23 @@ export default function SmartCartPage() {
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <div className="mb-10 max-w-3xl">
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Shopping guides</p>
-              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Plan your grocery shop with more confidence.</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">SmartCart grocery shopping guides</h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
+                Practical guides for UK shoppers on comparing supermarket prices, building smarter shopping lists, and planning grocery shops with SmartCart.
+              </p>
             </div>
-            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-5">
               {smartCartGuides.map((post) => (
                 <Link key={post.slug} href={`/blog/${post.slug}`} className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-colors hover:border-primary/40">
                   <h3 className="text-base font-extrabold leading-tight text-foreground">{post.title}</h3>
                   <p className="mt-3 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
+                  <span className="mt-4 inline-flex text-sm font-extrabold text-primary">Read guide</span>
                 </Link>
               ))}
             </div>
+            <Link href="/blog" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground transition-colors hover:border-primary hover:text-primary">
+              View all SmartCart guides
+            </Link>
           </div>
         </section>
 

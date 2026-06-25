@@ -42,6 +42,10 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
+  const relatedPosts = post.relatedSlugs
+    .map((relatedSlug) => blogPosts.find((blogPost) => blogPost.slug === relatedSlug))
+    .filter((blogPost): blogPost is NonNullable<typeof blogPost> => Boolean(blogPost));
+
   return (
     <>
       <Header />
@@ -55,6 +59,9 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart guide</p>
               <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-6xl">{post.title}</h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">{post.description}</p>
+              <p className="mt-5 text-base leading-7 text-muted-foreground">
+                You can also <Link href="/smartcart" className="font-bold text-primary hover:underline">explore SmartCart</Link> to see how it helps UK shoppers compare grocery prices before they shop.
+              </p>
             </div>
           </section>
 
@@ -81,6 +88,24 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   </section>
                 ))}
               </div>
+
+              {relatedPosts.length > 0 ? (
+                <div className="mt-14 rounded-2xl border border-border bg-background p-6 shadow-sm">
+                  <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Related SmartCart guides</h2>
+                  <div className="mt-5 grid gap-4">
+                    {relatedPosts.map((relatedPost) => (
+                      <Link
+                        key={relatedPost.slug}
+                        href={`/blog/${relatedPost.slug}`}
+                        className="rounded-2xl border border-border bg-card p-5 transition-colors hover:border-primary/40"
+                      >
+                        <h3 className="text-base font-extrabold leading-tight text-foreground">{relatedPost.title}</h3>
+                        <p className="mt-2 text-sm leading-6 text-muted-foreground">{relatedPost.excerpt}</p>
+                      </Link>
+                    ))}
+                  </div>
+                </div>
+              ) : null}
 
               <div className="mt-14 rounded-[2rem] bg-purple-dark p-8 text-white shadow-xl shadow-teal-900/10">
                 <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Start planning with SmartCart</h2>
