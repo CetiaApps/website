@@ -6,6 +6,7 @@ import { CheckCircle2, ListChecks, MapPin, PoundSterling, Search, ShoppingCart }
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import GooglePlayBadge from '@/components/GooglePlayBadge';
+import { blogPosts, featuredBlogPosts, type BlogPost } from '@/app/blog/posts';
 
 const promoVideoUrl = 'https://www.youtube.com/embed/kSl8CLXD9EM';
 
@@ -37,6 +38,10 @@ const carouselScreenshots = [
   { screen: 5, className: 'z-20 hidden -translate-x-6 scale-90 rotate-[7deg] opacity-90 sm:block' },
   { screen: 7, className: 'z-10 hidden -translate-x-12 scale-75 rotate-[13deg] opacity-70 md:block' },
 ];
+
+const smartCartGuides = featuredBlogPosts
+  .map((slug) => blogPosts.find((post) => post.slug === slug))
+  .filter((post): post is BlogPost => Boolean(post));
 
 export default function SmartCartPage() {
   return (
@@ -185,6 +190,23 @@ export default function SmartCartPage() {
                   <h3 className="text-xl font-extrabold text-foreground">{title}</h3>
                   <p className="mt-3 text-sm leading-6 text-muted-foreground">{text}</p>
                 </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="bg-background py-16 md:py-24">
+          <div className="mx-auto max-w-7xl px-5 md:px-10">
+            <div className="mb-10 max-w-3xl">
+              <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Shopping guides</p>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Plan your grocery shop with more confidence.</h2>
+            </div>
+            <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+              {smartCartGuides.map((post) => (
+                <Link key={post.slug} href={`/blog/${post.slug}`} className="rounded-2xl border border-border bg-card p-5 shadow-sm transition-colors hover:border-primary/40">
+                  <h3 className="text-base font-extrabold leading-tight text-foreground">{post.title}</h3>
+                  <p className="mt-3 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
+                </Link>
               ))}
             </div>
           </div>
