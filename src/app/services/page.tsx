@@ -8,7 +8,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Mobile app development, SaaS solution development and AI agent consulting from Cetia Solutions.',
+    'Mobile apps, web platforms, business tools and AI-assisted development from Cetia Solutions.',
 };
 
 const offerings = [
@@ -54,7 +54,7 @@ export default function ServicesPage() {
                 Software services for apps, SaaS and AI workflows.
               </h1>
               <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                Cetia Solutions helps UK businesses define, design and deliver production-ready products with clear architecture, thoughtful UX and practical launch support.
+                Cetia Solutions helps UK businesses define, design and deliver practical software products with clear architecture, thoughtful UX and practical launch support.
               </p>
             </div>
           </div>
@@ -113,7 +113,7 @@ export default function ServicesPage() {
             <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-teal-100">Start simple</p>
             <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">A good first conversation turns uncertainty into a route map.</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">
-              Share the product idea, workflow problem or AI opportunity you are exploring.
+              Share the app, web platform, business tool or AI-assisted workflow you are exploring.
             </p>
             <Link href="/contact" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-white px-6 text-sm font-extrabold text-primary">
               Contact Cetia Solutions

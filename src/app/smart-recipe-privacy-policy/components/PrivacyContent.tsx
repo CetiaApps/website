@@ -32,7 +32,7 @@ export default function PrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              SmartRecipe is a mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the SmartRecipe mobile application available on Android.
+              SmartRecipe is a mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use the SmartRecipe mobile application available on Android.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               If you have questions about this policy, please contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a>.
@@ -173,7 +173,7 @@ export default function PrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">10. International Data Transfers</h2>
             <p className="text-muted-foreground leading-relaxed">
-              CetiaApps operates globally. Your data may be transferred to and processed in countries other than your own, including the United States. We ensure appropriate safeguards are in place for such transfers, including Standard Contractual Clauses approved by the European Commission where applicable.
+              Cetia Solutions operates globally. Your data may be transferred to and processed in countries other than your own, including the United States. We ensure appropriate safeguards are in place for such transfers, including Standard Contractual Clauses approved by the European Commission where applicable.
             </p>
           </section>
 
@@ -192,7 +192,7 @@ export default function PrivacyContent() {
             <div className="bg-secondary border border-primary/20 rounded-2xl p-6 space-y-3">
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Company:</span>
-                <span className="text-muted-foreground text-sm">CetiaApps</span>
+                <span className="text-muted-foreground text-sm">Cetia Solutions</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">App:</span>
@@ -213,3 +213,4 @@ export default function PrivacyContent() {
     </div>
   );
 }
+

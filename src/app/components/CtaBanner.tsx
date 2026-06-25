@@ -22,7 +22,7 @@ export default function CtaBanner() {
                 <span className="text-accent accent-underline">world-class app.</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                Let CetiaApps turn your vision into a live, revenue-generating mobile product.
+                Let Cetia Solutions turn your vision into a live, revenue-generating mobile product.
               </p>
             </div>
             <div className="flex flex-col gap-4 md:items-end">

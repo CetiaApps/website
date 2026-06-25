@@ -68,7 +68,7 @@ export default function ProcessSection() {
               <span className="text-gradient-purple">live app.</span>
             </h2>
             <p className="text-muted-foreground leading-relaxed scroll-reveal-hidden">
-              Our proven 5-step process has delivered 10+ apps on time and on budget. Here&apos;s exactly what working with CetiaApps looks like.
+              Our proven 5-step process has delivered 10+ apps on time and on budget. Here&apos;s exactly what working with Cetia Solutions looks like.
             </p>
             <div className="mt-8 p-6 bg-secondary rounded-2xl border border-primary/20 scroll-reveal-hidden">
               <div className="text-3xl font-extrabold text-primary mb-1">8–12 weeks</div>

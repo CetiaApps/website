@@ -19,7 +19,7 @@ export default function AppsHero() {
           <span className="text-accent">Millions of moments.</span>
         </h1>
         <p className="text-white/70 text-xl leading-relaxed max-w-2xl">
-          SmartRecipe and Milo are live proof of what CetiaApps builds — premium, purposeful mobile experiences that users return to every single day.
+          SmartRecipe and Milo are live proof of what Cetia Solutions builds — premium, purposeful mobile experiences that users return to every single day.
         </p>
       </div>
     </section>

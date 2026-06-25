@@ -8,7 +8,7 @@ import ContactForm from '@/app/contact/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Cetia Solutions about mobile app development, SaaS development or AI agent consulting.',
+    'Contact Cetia Solutions about mobile apps, web platforms, business tools and AI-assisted development.',
 };
 
 export default function ContactPage() {

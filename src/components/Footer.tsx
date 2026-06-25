@@ -9,9 +9,9 @@ const services = [
 ];
 
 const smartCart = [
-  { label: 'SmartCart overview', href: '/smartcart' },
+  { label: 'Explore SmartCart', href: '/smartcart' },
   {
-    label: 'Google Play',
+    label: 'Get SmartCart on Google Play',
     href: 'https://play.google.com/store/apps/details?id=smartcart.cetia.app&utm_source=cetia_website&utm_medium=button&utm_campaign=smartcart_launch',
   },
 ];
@@ -47,7 +47,7 @@ export default function Footer() {
             <span className="text-xl font-extrabold tracking-tight">Cetia Solutions</span>
           </Link>
           <p className="max-w-sm text-sm leading-6 text-muted-foreground">
-            UK app development, SaaS development and AI agent consulting for businesses that want polished, production-ready software.
+            Practical software products for consumer apps, business tools, web platforms and AI-assisted workflows.
           </p>
         </div>
 
@@ -83,7 +83,7 @@ export default function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 text-xs font-semibold text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
           <p>(c) 2026 Cetia Solutions. All rights reserved.</p>
           <Link href="/contact" className="transition-colors hover:text-primary">
-            Start a project
+            Contact Cetia Solutions
           </Link>
         </div>
       </div>

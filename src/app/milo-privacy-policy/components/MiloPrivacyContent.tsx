@@ -30,7 +30,7 @@ export default function MiloPrivacyContent() {
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Milo is an AI assistant mobile application developed and operated by CetiaApps (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy describes how we collect, use, and protect information you provide when using the Milo app on Android devices.
+              Milo is an AI assistant mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy describes how we collect, use, and protect information you provide when using the Milo app on Android devices.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               Questions? Reach us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a>.
@@ -201,7 +201,7 @@ export default function MiloPrivacyContent() {
             <div className="rounded-2xl p-6 space-y-3 border" style={{ backgroundColor: '#EDE9FE', borderColor: '#7C3AED' }}>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Company:</span>
-                <span className="text-muted-foreground text-sm">CetiaApps</span>
+                <span className="text-muted-foreground text-sm">Cetia Solutions</span>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">App:</span>
@@ -222,3 +222,4 @@ export default function MiloPrivacyContent() {
     </div>
   );
 }
+

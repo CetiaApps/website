@@ -20,7 +20,7 @@ export default function ServicesHero() {
               <span className="text-gradient-purple">worth downloading.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-10">
-              From concept to Google Play in 8–12 weeks. CetiaApps delivers end-to-end mobile app development for startups and established businesses ready to go mobile.
+              From concept to Google Play in 8–12 weeks. Cetia Solutions delivers end-to-end mobile app development for startups and established businesses ready to go mobile.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link

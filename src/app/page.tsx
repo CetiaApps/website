@@ -9,7 +9,7 @@ import Footer from '@/components/Footer';
 export const metadata: Metadata = {
   title: 'Build Smarter Apps, SaaS Platforms and AI Agents',
   description:
-    'Cetia Solutions helps businesses turn ideas into production-ready mobile apps, SaaS products and AI-powered workflows.',
+    'Cetia Solutions builds practical digital products, from consumer apps like SmartCart to business web platforms and AI-assisted tools.',
 };
 
 const services = [
@@ -55,14 +55,14 @@ export default function HomePage() {
                 Build smarter apps, SaaS platforms and AI agents.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
-                Cetia Solutions helps businesses turn ideas into production-ready mobile apps, SaaS products and AI-powered workflows.
+                Cetia Solutions builds practical digital products that solve everyday problems, from smarter shopping tools to business-focused applications.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <Link href="/contact" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground shadow-sm transition-colors hover:bg-teal-800">
-                  Start a project <ArrowRight size={18} />
+                  Contact Cetia Solutions <ArrowRight size={18} />
                 </Link>
                 <Link href="/smartcart" className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground shadow-sm transition-colors hover:border-primary hover:text-primary">
-                  View SmartCart
+                  Explore SmartCart
                 </Link>
               </div>
             </div>
@@ -146,7 +146,10 @@ export default function HomePage() {
                 </div>
               </div>
               <p className="text-lg leading-8 text-muted-foreground">
-                A UK grocery price comparison app that helps shoppers build lists, compare supermarket prices, find nearby stores and manage price history.
+                Compare grocery prices across 7 UK supermarkets, build shopping lists with realtime prices, and find nearby stores before you shop.
+              </p>
+              <p className="mt-4 text-sm font-extrabold uppercase tracking-widest text-primary">
+                Available now on Google Play. Apple App Store version coming very soon.
               </p>
               <Link href="/smartcart" className="mt-8 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground">
                 Explore SmartCart <ArrowRight size={18} />
@@ -186,12 +189,12 @@ export default function HomePage() {
         <section className="bg-card px-5 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-5xl rounded-[2rem] bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:p-12">
             <Rocket className="mb-5 text-teal-200" size={34} />
-            <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">Ready to turn the next idea into a working product?</h2>
+            <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">Ready to build a practical software product?</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">
               Tell us what you want to build and we will help you shape the right first version.
             </p>
             <Link href="/contact" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-white px-6 text-sm font-extrabold text-primary">
-              Start a project
+              Contact Cetia Solutions
             </Link>
           </div>
         </section>

@@ -72,7 +72,7 @@ export default function Header() {
               href="/contact"
               className="hidden min-h-[44px] items-center rounded-full bg-foreground px-5 text-sm font-bold text-background shadow-sm transition-colors hover:bg-primary md:inline-flex"
             >
-              Start a project
+              Contact Cetia Solutions
             </Link>
             <button
               type="button"
@@ -104,7 +104,7 @@ export default function Header() {
             onClick={() => setMenuOpen(false)}
             className="mt-4 rounded-full bg-primary px-8 py-4 text-lg font-bold text-primary-foreground"
           >
-            Start a project
+            Contact Cetia Solutions
           </Link>
         </nav>
       </div>

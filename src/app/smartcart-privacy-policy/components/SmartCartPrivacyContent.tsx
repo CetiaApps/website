@@ -50,14 +50,14 @@ export default function SmartCartPrivacyContent() {
         <div className="prose prose-stone max-w-none">
           <div className="bg-secondary border border-primary/20 rounded-2xl p-6 mb-10">
             <p className="text-sm text-foreground leading-relaxed">
-              <strong>Summary:</strong> SmartCart helps you create grocery shopping lists, compare supermarket prices, find nearby stores, and manage subscriptions. We collect the information needed to provide those features, such as your account details, shopping-list content, price preferences, app cache data, and optional device permissions. We do not sell your personal data. You can request deletion of your SmartCart data through our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>.
+              <strong>Summary:</strong> SmartCart helps you create grocery shopping lists with realtime prices, compare supermarket prices across 7 UK supermarkets, and find nearby stores. We collect the information needed to provide those features, such as your account details, shopping-list content, price preferences, app cache data, and optional device permissions. We do not sell your personal data. You can request deletion of your SmartCart data through our <Link href="/smartcart-delete-my-data" className="text-primary font-semibold hover:underline">Delete my Data page</Link>.
             </p>
           </div>
 
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">1. Who We Are</h2>
             <p className="text-muted-foreground leading-relaxed">
-              SmartCart is a mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, store, and share information when you use SmartCart on Android, iOS, or any supported platform.
+              SmartCart is a mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy explains how we collect, use, store, and share information when you use SmartCart on Android. The Apple App Store version is coming very soon.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
               Contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="text-primary font-semibold">contact@cetia-solutions.co.uk</a> if you have questions or privacy requests.

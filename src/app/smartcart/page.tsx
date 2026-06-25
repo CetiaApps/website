@@ -10,24 +10,24 @@ import GooglePlayBadge from '@/components/GooglePlayBadge';
 const promoVideoUrl = 'https://www.youtube.com/embed/kSl8CLXD9EM';
 
 export const metadata: Metadata = {
-  title: 'SmartCart Grocery Price Comparison App',
+  title: 'SmartCart | UK Grocery Price Comparison App',
   description:
-    'SmartCart helps UK shoppers create shopping lists, compare supermarket prices and find better value across major supermarkets.',
+    'Compare grocery prices across 7 UK supermarkets with SmartCart. Build shopping lists with realtime prices, compare products, and find nearby supermarkets. Available now on Google Play.',
   keywords: ['SmartCart', 'grocery price comparison app', 'supermarket price comparison', 'UK shoppers', 'shopping list app'],
 };
 
 const features = [
-  { icon: ListChecks, title: 'Create smart shopping lists', text: 'Build weekly lists and keep items organised by store, quantity and plan.' },
-  { icon: PoundSterling, title: 'Compare supermarket prices', text: 'See matching grocery prices across major UK supermarkets before you shop.' },
-  { icon: Search, title: 'Find cheaper alternatives', text: 'Spot lower-price matches and potential savings item by item.' },
-  { icon: ShoppingCart, title: 'Save time on weekly shops', text: 'Plan your shop with price context already in front of you.' },
-  { icon: MapPin, title: 'Built for UK shoppers', text: 'Find nearby supermarkets and open maps or directions when you are ready to go.' },
+  { icon: ListChecks, title: 'Shopping lists with realtime prices', text: 'Build your grocery list and see realtime price information from 7 UK supermarkets as you plan your shop.' },
+  { icon: PoundSterling, title: 'Compare supermarket prices', text: 'Search for a product and compare prices across supermarkets to see where it is cheaper.' },
+  { icon: Search, title: 'Find cheaper options', text: 'Spot lower-priced matches and make better choices item by item.' },
+  { icon: MapPin, title: 'Find your nearest supermarket', text: 'Use location-based results to find nearby supermarkets and open maps or directions when you are ready to shop.' },
+  { icon: ShoppingCart, title: 'Built for UK grocery shoppers', text: 'SmartCart is designed around UK supermarkets, everyday grocery items, and real shopping decisions.' },
 ];
 
 const steps = [
-  ['Add items', 'Create a shopping list and add the groceries you plan to buy.'],
-  ['Compare prices', 'SmartCart checks matching products and highlights cheaper options.'],
-  ['Shop cheapest', 'Use the results to choose the store or item combination that works for you.'],
+  ['Create your shopping list', 'Add the groceries you need and organise your weekly shop in one place.'],
+  ['Compare realtime prices', 'SmartCart shows prices from 7 UK supermarkets so you can compare products before you buy.'],
+  ['Choose where to shop', 'Use price comparisons and nearby supermarket results to decide where to shop and get directions.'],
 ];
 
 const carouselScreenshots = [
@@ -54,10 +54,13 @@ export default function SmartCartPage() {
                 </div>
               </div>
               <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
-                Compare supermarket prices and shop smarter.
+                Compare grocery prices across 7 UK supermarkets.
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-                SmartCart helps UK shoppers create shopping lists, compare grocery prices and find better value across major supermarkets.
+                SmartCart helps UK shoppers build shopping lists with realtime prices, compare supermarket prices for individual products, and find nearby stores before they shop.
+              </p>
+              <p className="mt-4 max-w-2xl text-sm font-extrabold uppercase tracking-widest text-primary">
+                Available now on Google Play. Apple App Store version coming very soon.
               </p>
               <div className="mt-9 flex flex-col gap-3 sm:flex-row">
                 <GooglePlayBadge />
@@ -85,9 +88,9 @@ export default function SmartCartPage() {
           <div className="mx-auto grid max-w-7xl items-center gap-10 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-10">
             <div>
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Promo video</p>
-              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">See SmartCart in action.</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">See how SmartCart helps you shop smarter.</h2>
               <p className="mt-5 max-w-2xl text-base leading-7 text-muted-foreground">
-                Watch a quick SmartCart preview showing how the app helps shoppers compare prices and plan a better weekly shop.
+                Create your shopping list, check realtime prices across 7 UK supermarkets, compare products, and choose where to shop before you leave home.
               </p>
               <GooglePlayBadge className="mt-8" />
             </div>
@@ -173,7 +176,7 @@ export default function SmartCartPage() {
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <div className="mb-10 max-w-3xl">
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">How it works</p>
-              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Add items, compare prices, shop cheapest.</h2>
+              <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Create your list, compare prices, find a store.</h2>
             </div>
             <div className="grid gap-5 md:grid-cols-3">
               {steps.map(([title, text], index) => (
@@ -191,8 +194,8 @@ export default function SmartCartPage() {
           <div className="mx-auto grid max-w-5xl gap-8 rounded-[2rem] bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:grid-cols-[1fr_auto] md:items-center md:p-12">
             <div>
               <CheckCircle2 className="mb-5 text-teal-200" size={34} />
-              <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">Start comparing on Android.</h2>
-              <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">SmartCart is Android only for now and available through Google Play.</p>
+              <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">Start comparing grocery prices on Android.</h2>
+              <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">SmartCart is available now on Google Play, with the Apple App Store version coming very soon.</p>
               <div className="mt-6 flex flex-wrap gap-4 text-sm font-bold text-teal-50">
                 <Link href="/smartcart-privacy-policy" className="underline underline-offset-4">Privacy Policy</Link>
                 <Link href="/smartcart-delete-my-data" className="underline underline-offset-4">Delete my Data</Link>
