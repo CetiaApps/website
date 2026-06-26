@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Services',
   description:
     'Mobile apps, web platforms, business tools and AI-assisted development from Cetia Solutions.',
+  alternates: {
+    canonical: '/services',
+  },
 };
 
 const offerings = [

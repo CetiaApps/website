@@ -8,6 +8,9 @@ export const metadata: Metadata = {
   title: 'SmartCart Privacy Policy',
   description:
     'Privacy policy for SmartCart, the UK grocery price comparison app from Cetia Solutions.',
+  alternates: {
+    canonical: '/smartcart-privacy-policy',
+  },
 };
 
 export default function SmartCartPrivacyPolicyPage() {

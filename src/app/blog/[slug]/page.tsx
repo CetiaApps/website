@@ -26,10 +26,21 @@ export async function generateMetadata({ params }: BlogPostPageProps): Promise<M
   return {
     title: post.title,
     description: post.description,
+    alternates: {
+      canonical: `/blog/${post.slug}`,
+    },
     openGraph: {
       title: post.title,
       description: post.description,
+      url: `/blog/${post.slug}`,
       type: 'article',
+      images: [{ url: '/assets/images/smartcart-logo.png', width: 1200, height: 1200, alt: 'SmartCart app logo' }],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: post.title,
+      description: post.description,
+      images: ['/assets/images/smartcart-logo.png'],
     },
   };
 }

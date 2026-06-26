@@ -10,10 +10,21 @@ export const metadata: Metadata = {
   title: 'SmartCart Grocery Shopping Guides',
   description:
     'Practical guides for UK shoppers on comparing supermarket prices, building smarter shopping lists, and planning grocery shops with SmartCart.',
+  alternates: {
+    canonical: '/blog',
+  },
   openGraph: {
     title: 'SmartCart Grocery Shopping Guides',
     description:
       'Practical guides for UK shoppers on comparing supermarket prices, building smarter shopping lists, and planning grocery shops with SmartCart.',
+    url: '/blog',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'SmartCart Grocery Shopping Guides',
+    description:
+      'Practical guides for UK shoppers on comparing supermarket prices, building smarter shopping lists, and planning grocery shops with SmartCart.',
+    images: ['/assets/images/smartcart-logo.png'],
   },
 };
 

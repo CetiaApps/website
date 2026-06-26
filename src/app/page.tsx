@@ -8,9 +8,26 @@ import Footer from '@/components/Footer';
 import { blogPosts, type BlogPost } from '@/app/blog/posts';
 
 export const metadata: Metadata = {
-  title: 'Build Smarter Apps, SaaS Platforms and AI Agents',
+  title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
   description:
-    'Cetia Solutions builds practical digital products, from consumer apps like SmartCart to business web platforms and AI-assisted tools.',
+    'Cetia Solutions builds smart apps, automation tools and digital solutions for businesses and consumers. Explore our latest products including SmartCart.',
+  alternates: {
+    canonical: '/',
+  },
+  openGraph: {
+    title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
+    description:
+      'Cetia Solutions builds smart apps, automation tools and digital solutions for businesses and consumers. Explore our latest products including SmartCart.',
+    url: '/',
+    images: [{ url: '/assets/images/cetia-solutions-logo.png', width: 1200, height: 1200, alt: 'Cetia Solutions logo' }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
+    description:
+      'Cetia Solutions builds smart apps, automation tools and digital solutions for businesses and consumers. Explore our latest products including SmartCart.',
+    images: ['/assets/images/cetia-solutions-logo.png'],
+  },
 };
 
 const services = [
@@ -63,7 +80,7 @@ export default function HomePage() {
                 UK software studio
               </div>
               <h1 className="max-w-4xl text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
-                Build smarter apps, SaaS platforms and AI agents.
+                Smart digital solutions built by Cetia
               </h1>
               <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
                 Cetia Solutions builds practical digital products that solve everyday problems, from smarter shopping tools to business-focused applications.
@@ -104,8 +121,11 @@ export default function HomePage() {
             <div className="max-w-3xl">
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Services</p>
               <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
-                Software delivery across mobile, SaaS and AI.
+                What we do
               </h2>
+              <p className="mt-5 text-base leading-7 text-muted-foreground">
+                We design and build mobile apps, SaaS products, automation tools and AI-assisted workflows for practical real-world use.
+              </p>
             </div>
             <div className="mt-10 grid gap-5 md:grid-cols-3">
               {services.map((service) => {
@@ -129,7 +149,7 @@ export default function HomePage() {
             <div>
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Why Cetia Solutions</p>
               <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">
-                Built for useful products, not theatre.
+                Why choose Cetia Solutions
               </h2>
               <p className="mt-5 text-base leading-7 text-muted-foreground">
                 We help shape the idea, design the experience, build the product and keep improving it after launch.
@@ -152,8 +172,8 @@ export default function HomePage() {
               <div className="mb-6 flex items-center gap-4">
                 <Image src="/assets/images/smartcart-logo.png" alt="SmartCart logo" width={72} height={72} className="rounded-2xl shadow-sm" />
                 <div>
-                  <p className="text-sm font-extrabold uppercase tracking-widest text-primary">Featured case study</p>
-                  <h2 className="text-3xl font-extrabold tracking-tight text-foreground">SmartCart</h2>
+                  <p className="text-sm font-extrabold uppercase tracking-widest text-primary">Our products</p>
+                  <h2 className="text-3xl font-extrabold tracking-tight text-foreground">Featured app: SmartCart</h2>
                 </div>
               </div>
               <p className="text-lg leading-8 text-muted-foreground">
@@ -228,7 +248,7 @@ export default function HomePage() {
         <section className="bg-card px-5 py-16 md:px-10 md:py-24">
           <div className="mx-auto max-w-5xl rounded-[2rem] bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:p-12">
             <Rocket className="mb-5 text-teal-200" size={34} />
-            <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">Ready to build a practical software product?</h2>
+            <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">Contact us</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">
               Tell us what you want to build and we will help you shape the right first version.
             </p>

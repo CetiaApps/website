@@ -17,6 +17,9 @@ export const metadata: Metadata = {
   title: 'SmartCart Delete my Data',
   description:
     'How SmartCart users can request account and personal data deletion under UK GDPR and data protection rights.',
+  alternates: {
+    canonical: '/smartcart-delete-my-data',
+  },
 };
 
 export default function SmartCartDeleteMyDataPage() {

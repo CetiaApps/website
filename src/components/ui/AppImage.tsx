@@ -2,8 +2,12 @@
 
 import React, { useState, useCallback, useMemo, memo } from 'react';
 import Image from 'next/image';
+import type { ImageProps } from 'next/image';
 
-interface AppImageProps {
+type AppImageProps = Omit<
+    ImageProps,
+    'src' | 'alt' | 'width' | 'height' | 'className' | 'priority' | 'quality' | 'placeholder' | 'blurDataURL' | 'fill' | 'sizes' | 'onClick' | 'loading' | 'unoptimized'
+> & {
     src: string;
     alt: string;
     width?: number;
@@ -19,8 +23,7 @@ interface AppImageProps {
     fallbackSrc?: string;
     loading?: 'lazy' | 'eager';
     unoptimized?: boolean;
-    [key: string]: any;
-}
+};
 
 const AppImage = memo(function AppImage({
     src,
@@ -68,9 +71,7 @@ const AppImage = memo(function AppImage({
     }, [className, isLoading, onClick]);
 
     const imageProps = useMemo(() => {
-        const baseProps: any = {
-            src: imageSrc,
-            alt,
+        const baseProps: Partial<ImageProps> = {
             className: imageClassName,
             quality,
             placeholder,
@@ -91,12 +92,14 @@ const AppImage = memo(function AppImage({
         }
 
         return baseProps;
-    }, [imageSrc, alt, imageClassName, quality, placeholder, blurDataURL, resolvedUnoptimized, priority, loading, handleError, handleLoad, onClick]);
+    }, [imageClassName, quality, placeholder, blurDataURL, resolvedUnoptimized, priority, loading, handleError, handleLoad, onClick]);
 
     if (fill) {
         return (
             <div className="relative" style={{ width: '100%', height: '100%' }}>
                 <Image
+                    src={imageSrc}
+                    alt={alt}
                     {...imageProps}
                     fill
                     sizes={sizes || '(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw'}
@@ -109,6 +112,8 @@ const AppImage = memo(function AppImage({
 
     return (
         <Image
+            src={imageSrc}
+            alt={alt}
             {...imageProps}
             width={width || 400}
             height={height || 300}

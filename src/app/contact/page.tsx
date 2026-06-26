@@ -9,6 +9,9 @@ export const metadata: Metadata = {
   title: 'Contact',
   description:
     'Contact Cetia Solutions about mobile apps, web platforms, business tools and AI-assisted development.',
+  alternates: {
+    canonical: '/contact',
+  },
 };
 
 export default function ContactPage() {

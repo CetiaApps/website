@@ -7,14 +7,12 @@ import { QuestionMarkCircleIcon } from '@heroicons/react/24/outline';
 
 type IconVariant = 'outline' | 'solid';
 
-interface IconProps {
+interface IconProps extends React.SVGProps<SVGSVGElement> {
     name: string; // Changed to string to accept dynamic values
     variant?: IconVariant;
     size?: number;
     className?: string;
-    onClick?: () => void;
     disabled?: boolean;
-    [key: string]: any;
 }
 
 function Icon({
@@ -27,7 +25,7 @@ function Icon({
     ...props
 }: IconProps) {
     const iconSet = variant === 'solid' ? HeroIconsSolid : HeroIcons;
-    const IconComponent = iconSet[name as keyof typeof iconSet] as React.ComponentType<any>;
+    const IconComponent = iconSet[name as keyof typeof iconSet] as React.ComponentType<React.SVGProps<SVGSVGElement>> | undefined;
 
     if (!IconComponent) {
         return (

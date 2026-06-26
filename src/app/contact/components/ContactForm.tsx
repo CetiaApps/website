@@ -159,7 +159,7 @@ export default function ContactForm() {
           <div className="rounded-[2rem] bg-purple-dark p-6 text-white shadow-xl shadow-teal-900/10 md:p-8">
             <h2 className="text-2xl font-extrabold">Want to see a live product?</h2>
             <p className="mt-3 text-sm leading-6 text-teal-50">
-              SmartCart is Cetia Solutions' UK grocery price comparison app, built for shopping lists, realtime prices across 7 UK supermarkets and nearby store directions.
+              SmartCart is Cetia Solutions&apos; UK grocery price comparison app, built for shopping lists, realtime prices across 7 UK supermarkets and nearby store directions.
             </p>
             <Link href="/smartcart" className="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-white px-5 text-sm font-extrabold text-primary">
               Explore SmartCart
