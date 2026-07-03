@@ -38,12 +38,12 @@ function FooterLink({ href, label }: { href: string; label: string }) {
 
 export default function Footer() {
   return (
-    <footer className="border-t border-border bg-card">
+    <footer className="border-t border-border bg-background">
       <div className="mx-auto grid max-w-7xl gap-10 px-5 py-12 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:px-10">
         <div>
           <Link href="/" className="mb-5 flex items-center gap-3">
-            <span className="relative h-12 w-12 overflow-hidden rounded-xl border border-border bg-background">
-              <Image src="/assets/images/cetia-solutions-logo.png" alt="" fill sizes="48px" className="object-cover" />
+            <span className="relative h-14 w-14 bg-transparent">
+              <Image src="/assets/images/cetia-solutions-logo.png" alt="" fill sizes="56px" className="object-contain" />
             </span>
             <span className="text-xl font-extrabold tracking-tight">Cetia Solutions</span>
           </Link>

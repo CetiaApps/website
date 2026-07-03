@@ -60,7 +60,7 @@ export default function ContactForm() {
   if (submitted) {
     return (
       <section className="bg-background px-5 py-20 md:px-10">
-        <div className="mx-auto max-w-2xl rounded-[2rem] border border-border bg-card p-8 text-center shadow-sm">
+        <div className="mx-auto max-w-2xl rounded-xl border border-border bg-card p-8 text-center shadow-sm">
           <CheckCircle2 className="mx-auto mb-6 text-primary" size={48} />
           <h2 className="text-3xl font-extrabold text-foreground">Message received.</h2>
           <p className="mt-4 text-base leading-7 text-muted-foreground">
@@ -72,9 +72,9 @@ export default function ContactForm() {
   }
 
   return (
-    <section className="bg-card px-5 py-16 md:px-10 md:py-24">
+    <section className="bg-background px-5 py-16 md:px-10 md:py-24">
       <div className="mx-auto grid max-w-7xl gap-12 lg:grid-cols-[1.1fr_0.9fr]">
-        <form onSubmit={handleSubmit} className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+        <form onSubmit={handleSubmit} className="rounded-xl border border-border bg-card p-6 shadow-sm md:p-8">
           <h2 className="mb-8 text-3xl font-extrabold text-foreground">Project brief</h2>
           <div className="grid gap-5 md:grid-cols-2">
             <label className="block">
@@ -112,7 +112,7 @@ export default function ContactForm() {
               <textarea name="description" required rows={7} value={form.description} onChange={handleChange} className="w-full resize-none rounded-xl border border-border bg-card px-4 py-3.5 text-sm font-semibold outline-none transition focus:border-primary focus:ring-2 focus:ring-primary/15" />
             </label>
           </div>
-          <button type="submit" disabled={loading} className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-full bg-primary px-7 text-sm font-extrabold text-primary-foreground transition-colors hover:bg-teal-800 disabled:opacity-60">
+          <button type="submit" disabled={loading} className="mt-7 inline-flex min-h-[48px] items-center justify-center rounded-lg bg-primary px-7 text-sm font-extrabold text-primary-foreground transition-colors hover:bg-teal-800 disabled:opacity-60">
             {loading ? 'Sending...' : 'Send project brief'}
           </button>
           {error ? (
@@ -123,7 +123,7 @@ export default function ContactForm() {
         </form>
 
         <aside className="space-y-5">
-          <div className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm md:p-8">
             <h2 className="mb-5 text-2xl font-extrabold text-foreground">What Cetia Solutions can help with</h2>
             <div className="grid gap-4">
               {[
@@ -133,7 +133,7 @@ export default function ContactForm() {
               ].map(([Icon, label]) => {
                 const TypedIcon = Icon as typeof Smartphone;
                 return (
-                  <div key={label as string} className="flex items-center gap-3 rounded-2xl border border-border bg-card p-4">
+                  <div key={label as string} className="flex items-center gap-3 rounded-xl border border-border bg-card p-4">
                     <TypedIcon className="text-primary" size={22} />
                     <span className="text-sm font-extrabold text-foreground">{label as string}</span>
                   </div>
@@ -142,7 +142,7 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] border border-border bg-background p-6 shadow-sm md:p-8">
+          <div className="rounded-xl border border-border bg-card p-6 shadow-sm md:p-8">
             <h2 className="mb-5 text-2xl font-extrabold text-foreground">Contact details</h2>
             <div className="space-y-4 text-sm font-semibold text-muted-foreground">
               <a href="mailto:contact@cetia-solutions.co.uk" className="flex items-center gap-3 transition-colors hover:text-primary">
@@ -156,12 +156,12 @@ export default function ContactForm() {
             </div>
           </div>
 
-          <div className="rounded-[2rem] bg-purple-dark p-6 text-white shadow-xl shadow-teal-900/10 md:p-8">
+          <div className="rounded-xl bg-purple-dark p-6 text-white shadow-xl shadow-teal-900/10 md:p-8">
             <h2 className="text-2xl font-extrabold">Want to see a live product?</h2>
             <p className="mt-3 text-sm leading-6 text-teal-50">
               SmartCart is Cetia Solutions&apos; UK grocery price comparison app, built for shopping lists, realtime prices across 7 UK supermarkets and nearby store directions.
             </p>
-            <Link href="/smartcart" className="mt-6 inline-flex min-h-[44px] items-center rounded-full bg-white px-5 text-sm font-extrabold text-primary">
+            <Link href="/smartcart" className="mt-6 inline-flex min-h-[44px] items-center rounded-lg bg-white px-5 text-sm font-extrabold text-primary">
               Explore SmartCart
             </Link>
           </div>

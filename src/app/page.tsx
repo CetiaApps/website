@@ -5,7 +5,6 @@ import Link from 'next/link';
 import { ArrowRight, Bot, CheckCircle2, Cloud, Rocket, Smartphone } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
-import { blogPosts, type BlogPost } from '@/app/blog/posts';
 
 export const metadata: Metadata = {
   title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
@@ -57,66 +56,36 @@ const reasons = [
 
 const process = ['Discover', 'Design', 'Build', 'Launch', 'Improve'];
 
-const homeGuideSlugs = [
-  'how-to-compare-supermarket-prices-uk',
-  'save-money-weekly-grocery-shop-uk',
-  'smartcart-uk-grocery-price-comparison-app',
-];
-
-const homeGuides = homeGuideSlugs
-  .map((slug) => blogPosts.find((post) => post.slug === slug))
-  .filter((post): post is BlogPost => Boolean(post));
-
 export default function HomePage() {
   return (
     <>
       <Header />
       <main>
         <section className="relative overflow-hidden border-b border-border bg-background pt-28">
-          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(20,184,166,0.14),rgba(124,58,237,0.10)_45%,rgba(255,255,255,0)_70%)]" />
-          <div className="mx-auto grid min-h-[calc(100vh-96px)] max-w-7xl items-center gap-12 px-5 pb-16 pt-8 md:grid-cols-[1.06fr_0.94fr] md:px-10">
-            <div className="relative z-10">
-              <div className="mb-6 inline-flex items-center rounded-full border border-primary/20 bg-card px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-primary shadow-sm">
+          <div className="mx-auto flex min-h-[calc(100vh-96px)] max-w-5xl items-center px-5 pb-20 pt-10 text-center md:px-10 md:pb-28">
+            <div className="relative z-10 mx-auto">
+              <div className="mb-7 inline-flex items-center rounded-lg border border-primary/20 bg-card/80 px-4 py-2 text-xs font-extrabold uppercase tracking-widest text-primary shadow-sm backdrop-blur">
                 UK software studio
               </div>
-              <h1 className="max-w-4xl text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
+              <h1 className="mx-auto max-w-4xl text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
                 Smart digital solutions built by Cetia
               </h1>
-              <p className="mt-6 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
+              <p className="mx-auto mt-7 max-w-2xl text-lg leading-8 text-muted-foreground md:text-xl">
                 Cetia Solutions builds practical digital products that solve everyday problems, from smarter shopping tools to business-focused applications.
               </p>
-              <div className="mt-9 flex flex-col gap-3 sm:flex-row">
-                <Link href="/contact" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground shadow-sm transition-colors hover:bg-teal-800">
+              <div className="mt-10 flex flex-col justify-center gap-3 sm:flex-row">
+                <Link href="/contact" className="inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-extrabold text-primary-foreground shadow-sm transition-colors hover:bg-teal-800">
                   Contact Cetia Solutions <ArrowRight size={18} />
                 </Link>
-                <Link href="/smartcart" className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground shadow-sm transition-colors hover:border-primary hover:text-primary">
+                <Link href="/smartcart" className="inline-flex min-h-[48px] items-center justify-center rounded-lg border border-border bg-card px-6 text-sm font-extrabold text-foreground shadow-sm transition-colors hover:border-primary hover:text-primary">
                   Explore SmartCart
                 </Link>
-              </div>
-            </div>
-
-            <div className="relative z-10">
-              <div className="relative mx-auto max-w-md rounded-[2rem] border border-border bg-card p-5 shadow-2xl shadow-teal-900/10">
-                <div className="relative aspect-square overflow-hidden rounded-[1.5rem] bg-secondary">
-                  <Image src="/assets/images/cetia-solutions-logo.png" alt="Cetia Solutions logo" fill sizes="(max-width: 768px) 80vw, 420px" className="object-cover" priority />
-                </div>
-                <div className="mt-5 grid gap-3 sm:grid-cols-3">
-                  {services.map((service) => {
-                    const Icon = service.icon;
-                    return (
-                      <div key={service.title} className="rounded-2xl border border-border bg-background p-3">
-                        <Icon className="mb-2 text-primary" size={20} />
-                        <p className="text-xs font-extrabold text-foreground">{service.title}</p>
-                      </div>
-                    );
-                  })}
-                </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="bg-card py-16 md:py-24">
+        <section className="bg-background py-16 md:py-24">
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <div className="max-w-3xl">
               <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">Services</p>
@@ -131,8 +100,8 @@ export default function HomePage() {
               {services.map((service) => {
                 const Icon = service.icon;
                 return (
-                  <Link key={service.title} href="/services" className="group rounded-2xl border border-border bg-background p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-teal-900/10">
-                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-2xl bg-secondary text-primary">
+                  <Link key={service.title} href="/services" className="group rounded-xl border border-border bg-card p-6 shadow-sm transition-all hover:-translate-y-1 hover:border-primary/40 hover:shadow-xl hover:shadow-teal-900/10">
+                    <div className="mb-6 flex h-12 w-12 items-center justify-center rounded-lg bg-secondary text-primary">
                       <Icon size={24} />
                     </div>
                     <h3 className="text-xl font-extrabold text-foreground">{service.title}</h3>
@@ -157,7 +126,7 @@ export default function HomePage() {
             </div>
             <div className="grid gap-4 sm:grid-cols-2">
               {reasons.map((reason) => (
-                <div key={reason} className="rounded-2xl border border-border bg-card p-5 shadow-sm">
+                <div key={reason} className="rounded-xl border border-border bg-card p-5 shadow-sm">
                   <CheckCircle2 className="mb-4 text-primary" size={24} />
                   <p className="font-bold text-foreground">{reason}</p>
                 </div>
@@ -166,12 +135,12 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="overflow-hidden bg-card py-16 md:py-24">
+        <section className="overflow-hidden bg-background py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 md:grid-cols-[0.9fr_1.1fr] md:px-10">
-            <div>
+            <div className="min-w-0">
               <div className="mb-6 flex items-center gap-4">
-                <Image src="/assets/images/smartcart-logo.png" alt="SmartCart logo" width={72} height={72} className="rounded-2xl shadow-sm" />
-                <div>
+                <Image src="/assets/images/smartcart-logo.png" alt="SmartCart logo" width={72} height={72} className="rounded-xl shadow-sm" />
+                <div className="min-w-0">
                   <p className="text-sm font-extrabold uppercase tracking-widest text-primary">Our products</p>
                   <h2 className="text-3xl font-extrabold tracking-tight text-foreground">Featured app: SmartCart</h2>
                 </div>
@@ -182,44 +151,19 @@ export default function HomePage() {
               <p className="mt-4 text-sm font-extrabold uppercase tracking-widest text-primary">
                 Available now on Google Play. Apple App Store version coming very soon.
               </p>
-              <Link href="/smartcart" className="mt-8 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground">
+              <Link href="/smartcart" className="mt-8 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-extrabold text-primary-foreground">
                 Explore SmartCart <ArrowRight size={18} />
               </Link>
             </div>
-            <div className="flex gap-4 overflow-hidden pb-4">
-              {[2, 3, 5].map((screen) => (
-                <div key={screen} className="phone-frame relative h-[440px] min-w-[220px] overflow-hidden bg-card">
-                  <Image src={`/assets/images/smartcart-screen-${String(screen).padStart(2, '0')}.png`} alt={`SmartCart app screenshot ${screen}`} fill sizes="220px" className="object-cover" />
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        <section className="bg-background py-16 md:py-24">
-          <div className="mx-auto max-w-7xl px-5 md:px-10">
-            <div className="mb-10 flex flex-col gap-5 md:flex-row md:items-end md:justify-between">
-              <div className="max-w-3xl">
-                <p className="mb-3 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart guides</p>
-                <h2 className="text-3xl font-extrabold tracking-tight text-foreground md:text-5xl">Grocery shopping guides</h2>
-                <p className="mt-5 text-base leading-7 text-muted-foreground">
-                  Helpful SmartCart guides for comparing supermarket prices and planning your weekly shop.
-                </p>
-              </div>
-              <Link href="/blog" className="inline-flex min-h-[48px] items-center justify-center rounded-full border border-border bg-card px-6 text-sm font-extrabold text-foreground transition-colors hover:border-primary hover:text-primary">
-                View all guides
-              </Link>
-            </div>
-            <div className="grid gap-5 md:grid-cols-3">
-              {homeGuides.map((post) => (
-                <Link key={post.slug} href={`/blog/${post.slug}`} className="rounded-2xl border border-border bg-card p-6 shadow-sm transition-colors hover:border-primary/40">
-                  <h3 className="text-xl font-extrabold leading-tight text-foreground">{post.title}</h3>
-                  <p className="mt-4 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
-                  <span className="mt-5 inline-flex items-center gap-2 text-sm font-extrabold text-primary">
-                    Read guide <ArrowRight size={16} />
-                  </span>
-                </Link>
-              ))}
+            <div className="flex justify-center overflow-visible pb-8 pt-6">
+              <Image
+                src="/assets/images/smartcart-product-comparison-phone.png"
+                alt="SmartCart product comparison iPhone mockup"
+                width={1024}
+                height={1536}
+                sizes="(max-width: 768px) 88vw, 520px"
+                className="h-auto w-full max-w-[520px] rounded-xl object-contain"
+              />
             </div>
           </div>
         </section>
@@ -234,8 +178,8 @@ export default function HomePage() {
             </div>
             <div className="grid gap-4 md:grid-cols-5">
               {process.map((step, index) => (
-                <div key={step} className="rounded-2xl border border-border bg-card p-5 shadow-sm">
-                  <span className="mb-5 flex h-9 w-9 items-center justify-center rounded-full bg-secondary text-sm font-extrabold text-primary">
+                <div key={step} className="rounded-xl border border-border bg-card p-5 shadow-sm">
+                  <span className="mb-5 flex h-9 w-9 items-center justify-center rounded-lg bg-secondary text-sm font-extrabold text-primary">
                     {index + 1}
                   </span>
                   <h3 className="text-lg font-extrabold text-foreground">{step}</h3>
@@ -245,14 +189,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        <section className="bg-card px-5 py-16 md:px-10 md:py-24">
-          <div className="mx-auto max-w-5xl rounded-[2rem] bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:p-12">
+        <section className="bg-background px-5 py-16 md:px-10 md:py-24">
+          <div className="mx-auto max-w-5xl rounded-xl bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:p-12">
             <Rocket className="mb-5 text-teal-200" size={34} />
             <h2 className="max-w-3xl text-3xl font-extrabold tracking-tight md:text-5xl">Contact us</h2>
             <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">
               Tell us what you want to build and we will help you shape the right first version.
             </p>
-            <Link href="/contact" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-full bg-white px-6 text-sm font-extrabold text-primary">
+            <Link href="/contact" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-lg bg-white px-6 text-sm font-extrabold text-primary">
               Contact Cetia Solutions
             </Link>
           </div>

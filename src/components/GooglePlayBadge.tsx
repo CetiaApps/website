@@ -15,7 +15,7 @@ export default function GooglePlayBadge({ className = '' }: { className?: string
       rel="noopener noreferrer"
       aria-label="Get SmartCart on Google Play"
       onClick={() => track('SmartCart Google Play Click', { page: 'smartcart_landing_page' })}
-      className={`inline-flex min-h-[58px] min-w-[196px] items-center justify-center gap-3 rounded-xl bg-black px-5 py-3 text-white shadow-lg shadow-teal-900/15 transition-transform hover:-translate-y-0.5 ${className}`}
+      className={`inline-flex min-h-[58px] min-w-[196px] items-center justify-center gap-3 rounded-lg bg-black px-5 py-3 text-white shadow-lg shadow-teal-900/15 transition-transform hover:-translate-y-0.5 ${className}`}
     >
       <svg width="30" height="34" viewBox="0 0 30 34" aria-hidden="true" className="shrink-0">
         <path fill="#00F0FF" d="M1.1 1.4c-.5.4-.8 1.1-.8 2v27.2c0 .9.3 1.6.8 2l14.7-15.6L1.1 1.4Z" />

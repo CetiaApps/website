@@ -47,16 +47,16 @@ export default function BlogIndexPage() {
           </div>
         </section>
 
-        <section className="bg-card py-16 md:py-24">
+        <section className="bg-background py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-5 px-5 md:grid-cols-2 md:px-10 lg:grid-cols-3">
             {blogPosts.map((post) => (
-              <article key={post.slug} className="rounded-2xl border border-border bg-background p-6 shadow-sm">
+              <article key={post.slug} className="rounded-xl border border-border bg-card p-6 shadow-sm">
                 <p className="mb-3 text-xs font-extrabold uppercase tracking-widest text-primary">SmartCart guide</p>
                 <h2 className="text-xl font-extrabold leading-tight text-foreground">{post.title}</h2>
                 <p className="mt-4 text-sm leading-6 text-muted-foreground">{post.excerpt}</p>
                 <Link
                   href={`/blog/${post.slug}`}
-                  className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-full bg-primary px-5 text-sm font-extrabold text-primary-foreground"
+                  className="mt-6 inline-flex min-h-[44px] items-center gap-2 rounded-lg bg-primary px-5 text-sm font-extrabold text-primary-foreground"
                 >
                   Read guide <ArrowRight size={16} />
                 </Link>
