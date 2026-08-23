@@ -14,7 +14,7 @@ const navLinks = [
 
 const productLinks = [
   { label: 'SmartCart', href: '/smartcart' },
-  { label: 'Shopping guide', href: '/blog' },
+  { label: 'Shopping guides', href: '/blog' },
 ];
 
 export default function Header() {

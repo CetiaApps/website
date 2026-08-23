@@ -57,12 +57,34 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     .map((relatedSlug) => blogPosts.find((blogPost) => blogPost.slug === relatedSlug))
     .filter((blogPost): blogPost is NonNullable<typeof blogPost> => Boolean(blogPost));
 
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cetia-solutions.co.uk';
+  const articleSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: post.title,
+    description: post.description,
+    image: `${siteUrl}/assets/images/smartcart-logo.png`,
+    author: { '@type': 'Organization', name: 'Cetia Solutions', url: siteUrl },
+    publisher: { '@type': 'Organization', name: 'Cetia Solutions', url: siteUrl },
+    mainEntityOfPage: `${siteUrl}/blog/${post.slug}`,
+  };
+  const breadcrumbSchema = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: 'SmartCart guides', item: `${siteUrl}/blog` },
+      { '@type': 'ListItem', position: 2, name: post.title, item: `${siteUrl}/blog/${post.slug}` },
+    ],
+  };
+
   return (
     <>
       <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <main>
         <article>
-          <section className="border-b border-border bg-background pt-32">
+          <section className="bg-hero-glow border-b border-border bg-background pt-32">
             <div className="mx-auto max-w-4xl px-5 pb-14 md:px-10 md:pb-20">
               <Link href="/blog" className="mb-6 inline-flex text-sm font-bold text-primary hover:underline">
                 Back to SmartCart guides
@@ -71,7 +93,11 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-6xl">{post.title}</h1>
               <p className="mt-6 text-lg leading-8 text-muted-foreground">{post.description}</p>
               <p className="mt-5 text-base leading-7 text-muted-foreground">
-                You can also <Link href="/smartcart" className="font-bold text-primary hover:underline">explore SmartCart</Link> to see how it helps UK shoppers compare grocery prices before they shop.
+                You can also{' '}
+                <Link href="https://getsmartcart.co.uk/" target="_blank" rel="noopener noreferrer" className="font-bold text-primary hover:underline">
+                  visit SmartCart
+                </Link>{' '}
+                to see how it helps UK shoppers compare grocery prices before they shop.
               </p>
             </div>
           </section>
@@ -101,7 +127,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               </div>
 
               {relatedPosts.length > 0 ? (
-                <div className="mt-14 rounded-xl border border-border bg-card p-6 shadow-sm">
+                <div className="card-elevated mt-14 rounded-xl border border-border bg-card p-6 shadow-sm">
                   <h2 className="text-2xl font-extrabold tracking-tight text-foreground">Related SmartCart guides</h2>
                   <div className="mt-5 grid gap-4">
                     {relatedPosts.map((relatedPost) => (
@@ -118,14 +144,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                 </div>
               ) : null}
 
-              <div className="mt-14 rounded-xl bg-purple-dark p-8 text-white shadow-xl shadow-teal-900/10">
+              <div className="mt-14 rounded-xl bg-purple-dark p-8 text-white shadow-xl shadow-teal-900/20">
                 <h2 className="text-2xl font-extrabold tracking-tight md:text-3xl">Start planning with SmartCart</h2>
                 <p className="mt-4 text-sm leading-6 text-teal-50">
-                  SmartCart is available now on Google Play, with the Apple App Store version coming very soon.
+                  SmartCart is available now as a web app, on Google Play, and on the App Store.
                 </p>
                 <Link
-                  href="/smartcart"
-                  className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-lg bg-white px-6 text-sm font-extrabold text-primary"
+                  href="https://getsmartcart.co.uk/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="mt-6 inline-flex min-h-[48px] items-center gap-2 rounded-full bg-white px-6 text-sm font-extrabold text-primary"
                 >
                   {post.cta} <ArrowRight size={16} />
                 </Link>

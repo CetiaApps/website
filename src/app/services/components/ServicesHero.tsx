@@ -7,7 +7,7 @@ export default function ServicesHero() {
       {/* Background */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute -top-40 -right-40 w-[600px] h-[600px] rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #7C3AED 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }} />
       </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
@@ -16,11 +16,11 @@ export default function ServicesHero() {
               <span className="text-xs font-bold uppercase tracking-widest text-primary">For Businesses</span>
             </div>
             <h1 className="text-hero font-extrabold text-foreground tracking-tight mb-6">
-              We build apps<br />
-              <span className="text-gradient-purple">worth downloading.</span>
+              Software<br />
+              <span className="text-gradient-purple">worth shipping.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-10">
-              From concept to Google Play in 8–12 weeks. Cetia Solutions delivers end-to-end mobile app development for startups and established businesses ready to go mobile.
+              Cetia Solutions delivers end-to-end mobile app, SaaS and AI agent development for startups and established businesses — with the same craft we put into our own products.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
@@ -33,10 +33,10 @@ export default function ServicesHero() {
                 </svg>
               </Link>
               <a
-                href="#process"
+                href="#mobile-apps"
                 className="inline-flex items-center gap-2 px-7 py-4 border-2 border-border text-foreground rounded-full font-bold hover:border-primary hover:text-primary transition-all duration-300"
               >
-                See Our Process
+                See What We Build
               </a>
             </div>
           </div>
@@ -44,10 +44,10 @@ export default function ServicesHero() {
           {/* Right side stats */}
           <div className="grid grid-cols-2 gap-4">
             {[
-              { value: '8–12wk', label: 'Average delivery time', bg: 'bg-primary', text: 'text-primary-foreground' },
-              { value: '10+', label: 'Apps shipped', bg: 'bg-accent', text: 'text-accent-foreground' },
-              { value: '100%', label: 'Native performance', bg: 'bg-muted', text: 'text-foreground' },
-              { value: '5★', label: 'Client satisfaction', bg: 'bg-foreground', text: 'text-background' },
+              { value: 'Mobile', label: 'Android, iOS & cross-platform', bg: 'bg-primary', text: 'text-primary-foreground' },
+              { value: 'SaaS', label: 'Dashboards & platforms', bg: 'bg-accent', text: 'text-accent-foreground' },
+              { value: 'AI', label: 'Agents & automation', bg: 'bg-muted', text: 'text-foreground' },
+              { value: 'UK', label: 'Based, remote-first', bg: 'bg-foreground', text: 'text-background' },
             ]?.map((item) => (
               <div key={item?.label} className={`${item?.bg} ${item?.text} rounded-2xl p-8 flex flex-col justify-between min-h-[150px]`}>
                 <div className="text-4xl font-extrabold tracking-tight">{item?.value}</div>

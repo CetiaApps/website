@@ -16,6 +16,21 @@ const nextConfig = {
   images: {
     remotePatterns: imageHosts,
     minimumCacheTTL: 60,
-  }
+  },
+
+  async redirects() {
+    return [
+      {
+        source: '/smartcart-privacy-policy',
+        destination: 'https://getsmartcart.co.uk/privacy',
+        permanent: false,
+      },
+      {
+        source: '/smartcart-delete-my-data',
+        destination: 'https://getsmartcart.co.uk/delete-data',
+        permanent: false,
+      },
+    ];
+  },
 };
 export default nextConfig;

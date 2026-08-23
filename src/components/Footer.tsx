@@ -9,17 +9,16 @@ const services = [
 ];
 
 const smartCart = [
-  { label: 'Explore SmartCart', href: '/smartcart' },
+  { label: 'Visit getsmartcart.co.uk', href: 'https://getsmartcart.co.uk/' },
+  { label: 'Open the web app', href: 'https://getsmartcart.co.uk/app' },
   { label: 'SmartCart guides', href: '/blog' },
-  {
-    label: 'Get SmartCart on Google Play',
-    href: 'https://play.google.com/store/apps/details?id=smartcart.cetia.app&utm_source=cetia_website&utm_medium=button&utm_campaign=smartcart_launch',
-  },
 ];
 
 const legal = [
-  { label: 'SmartCart Privacy Policy', href: '/smartcart-privacy-policy' },
-  { label: 'Delete my Data', href: '/smartcart-delete-my-data' },
+  { label: 'SmartCart Privacy Policy', href: 'https://getsmartcart.co.uk/privacy' },
+  { label: 'SmartCart Delete my Data', href: 'https://getsmartcart.co.uk/delete-data' },
+  { label: 'Milo Privacy Policy', href: '/milo-privacy-policy' },
+  { label: 'SmartRecipe Privacy Policy', href: '/smart-recipe-privacy-policy' },
 ];
 
 function FooterLink({ href, label }: { href: string; label: string }) {

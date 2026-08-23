@@ -10,6 +10,12 @@ export const metadata: Metadata = {
   alternates: {
     canonical: '/milo-privacy-policy',
   },
+  openGraph: {
+    title: 'Milo Privacy Policy | Cetia Solutions',
+    description: 'Privacy policy for Milo, the AI assistant app from Cetia Solutions.',
+    url: '/milo-privacy-policy',
+  },
+  robots: { index: true, follow: true },
 };
 
 export default function MiloPrivacyPolicyPage() {

@@ -9,8 +9,8 @@ const apps = [
     name: 'SmartRecipe',
     tagline: 'Cook smarter, shop smarter.',
     description: 'SmartRecipe gives you access to over 200 recipes with full ingredients, instructions and dietary information. Create a smart shopping list from any recipe and get live price updates from all major UK supermarkets — with side-by-side price comparison.',
-    color: '#7C3AED',
-    lightColor: '#F3F0FF',
+    color: 'var(--accent)',
+    lightColor: 'var(--accent-light)',
     badge: 'Food & Cooking',
     features: [
       '200+ recipes with search',
@@ -38,8 +38,8 @@ const apps = [
     name: 'Milo',
     tagline: 'Your AI-powered personal assistant.',
     description: 'Milo is an AI agent that searches and organises your Gmail, Google Drive and Google Calendar. Import bank transaction files to view your spending, build budgets and create AI-powered forecasts. Manage tasks, notes and lists — all AI-enabled.',
-    color: '#6D28D9',
-    lightColor: '#EDE9FE',
+    color: 'var(--accent-deep)',
+    lightColor: 'var(--accent-light)',
     badge: 'AI Assistant',
     features: [
       'Search & organise Gmail, Google Drive, Google Calendar',
@@ -85,25 +85,15 @@ export default function AppsShowcase() {
   }, []);
 
   return (
-    <section ref={sectionRef} className="py-24 px-6 md:px-10 bg-background">
+    <section ref={sectionRef} className="py-16 md:py-20 px-6 md:px-10 bg-background">
       <div className="max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="mb-16 scroll-reveal-hidden">
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-secondary border border-primary/20 mb-6">
-            <span className="text-xs font-bold uppercase tracking-widest text-primary">Our Apps</span>
-          </div>
-          <h2 className="text-display font-extrabold text-foreground mb-4">
-            Apps that <span className="text-gradient-purple">people love.</span>
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-xl">Two distinct apps, one shared commitment: building mobile experiences that genuinely improve daily life.</p>
-        </div>
-
         {/* App cards */}
         <div className="space-y-20">
           {apps?.map((app, idx) => (
             <div
               key={app?.id}
-              className={`grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-reveal-hidden ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
+              id={app?.id}
+              className={`scroll-mt-28 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center scroll-reveal-hidden ${idx % 2 === 1 ? 'lg:flex-row-reverse' : ''}`}
             >
               {/* Text side */}
               <div className={`lg:col-span-5 ${idx % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
@@ -148,11 +138,11 @@ export default function AppsShowcase() {
                 {/* CTAs */}
                 <div className="flex flex-wrap gap-3">
                   <Link
-                    href={app?.href}
+                    href="/contact"
                     className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-bold text-sm text-primary-foreground hover:opacity-90 transition-all duration-200 hover:scale-105"
                     style={{ backgroundColor: app?.color }}
                   >
-                    View App Details
+                    Ask about {app?.name}
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                       <path d="M5 12h14M12 5l7 7-7 7" />
                     </svg>
@@ -205,18 +195,6 @@ export default function AppsShowcase() {
           ))}
         </div>
 
-        {/* View all CTA */}
-        <div className="mt-16 text-center scroll-reveal-hidden">
-          <Link
-            href="/apps"
-            className="inline-flex items-center gap-3 px-8 py-4 bg-foreground text-background rounded-full font-bold text-base hover:bg-primary transition-all duration-300 hover:scale-105"
-          >
-            Explore All Apps in Detail
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </Link>
-        </div>
       </div>
     </section>
   );

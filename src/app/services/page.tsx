@@ -4,13 +4,38 @@ import Link from 'next/link';
 import { ArrowRight, Bot, CheckCircle2, Cloud, Smartphone } from 'lucide-react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import ServicesHero from '@/app/services/components/ServicesHero';
+import CtaBanner from '@/app/components/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Services',
   description:
-    'Mobile apps, web platforms, business tools and AI-assisted development from Cetia Solutions.',
+    'Cetia Solutions builds mobile apps, SaaS platforms and AI agents for UK businesses — from strategy and design through to launch and ongoing support.',
   alternates: {
     canonical: '/services',
+  },
+  openGraph: {
+    title: 'Services | Cetia Solutions',
+    description:
+      'Cetia Solutions builds mobile apps, SaaS platforms and AI agents for UK businesses — from strategy and design through to launch and ongoing support.',
+    url: '/services',
+  },
+};
+
+const serviceSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Service',
+  serviceType: 'Software development',
+  provider: { '@type': 'Organization', name: 'Cetia Solutions', url: 'https://www.cetia-solutions.co.uk' },
+  areaServed: 'GB',
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Cetia Solutions services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Mobile app consulting & development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'SaaS solution consulting & development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI agent consulting & development' } },
+    ],
   },
 };
 
@@ -48,35 +73,25 @@ export default function ServicesPage() {
   return (
     <>
       <Header />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <main>
-        <section className="border-b border-border bg-background pt-32">
-          <div className="mx-auto max-w-7xl px-5 pb-16 md:px-10 md:pb-24">
-            <div className="max-w-4xl">
-              <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-primary">Services</p>
-              <h1 className="text-5xl font-extrabold tracking-tight text-foreground md:text-7xl">
-                Software services for apps, SaaS and AI workflows.
-              </h1>
-              <p className="mt-6 max-w-3xl text-lg leading-8 text-muted-foreground">
-                Cetia Solutions helps UK businesses define, design and deliver practical software products with clear architecture, thoughtful UX and practical launch support.
-              </p>
-            </div>
-          </div>
-        </section>
+        <ServicesHero />
 
         <section className="bg-background py-16 md:py-24">
           <div className="mx-auto grid max-w-7xl gap-6 px-5 md:px-10">
-            {offerings.map((offering) => {
+            {offerings.map((offering, index) => {
               const Icon = offering.icon;
+              const iconTint = index === 0 ? 'bg-primary/10 text-primary' : index === 1 ? 'bg-accent/10 text-accent' : 'bg-secondary text-primary';
               return (
-                <article key={offering.id} id={offering.id} className="scroll-mt-28 rounded-xl border border-border bg-card p-6 shadow-sm md:p-9">
+                <article key={offering.id} id={offering.id} className="card-elevated scroll-mt-28 rounded-xl border border-border bg-card p-6 shadow-sm md:p-9">
                   <div className="grid gap-8 md:grid-cols-[0.9fr_1.1fr]">
                     <div>
-                      <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-lg bg-secondary text-primary">
+                      <div className={`mb-5 flex h-14 w-14 items-center justify-center rounded-lg ${iconTint}`}>
                         <Icon size={28} />
                       </div>
                       <h2 className="text-2xl font-extrabold tracking-tight text-foreground md:text-4xl">{offering.title}</h2>
                       <p className="mt-4 text-base leading-7 text-muted-foreground">{offering.description}</p>
-                      <Link href="/contact" className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-lg bg-primary px-6 text-sm font-extrabold text-primary-foreground">
+                      <Link href="/contact" className="mt-7 inline-flex min-h-[48px] items-center justify-center gap-2 rounded-full bg-primary px-6 text-sm font-extrabold text-primary-foreground">
                         Talk about this service <ArrowRight size={18} />
                       </Link>
                     </div>
@@ -111,18 +126,7 @@ export default function ServicesPage() {
           </div>
         </section>
 
-        <section className="bg-background px-5 py-16 md:px-10 md:py-24">
-          <div className="mx-auto max-w-5xl rounded-xl bg-purple-dark p-8 text-white shadow-2xl shadow-teal-900/15 md:p-12">
-            <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-teal-100">Start simple</p>
-            <h2 className="text-3xl font-extrabold tracking-tight md:text-5xl">A good first conversation turns uncertainty into a route map.</h2>
-            <p className="mt-5 max-w-2xl text-base leading-7 text-teal-50">
-              Share the app, web platform, business tool or AI-assisted workflow you are exploring.
-            </p>
-            <Link href="/contact" className="mt-8 inline-flex min-h-[48px] items-center justify-center rounded-lg bg-white px-6 text-sm font-extrabold text-primary">
-              Contact Cetia Solutions
-            </Link>
-          </div>
-        </section>
+        <CtaBanner />
       </main>
       <Footer />
     </>

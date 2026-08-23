@@ -6,9 +6,14 @@ import PrivacyContent from '@/app/smart-recipe-privacy-policy/components/Privacy
 
 export const metadata: Metadata = {
   title: 'SmartRecipe Privacy Policy',
-  description: 'Privacy policy for SmartRecipe from Cetia Solutions.',
+  description: 'Privacy policy for SmartRecipe, the recipe and smart shopping list app from Cetia Solutions.',
   alternates: {
     canonical: '/smart-recipe-privacy-policy',
+  },
+  openGraph: {
+    title: 'SmartRecipe Privacy Policy | Cetia Solutions',
+    description: 'Privacy policy for SmartRecipe, the recipe and smart shopping list app from Cetia Solutions.',
+    url: '/smart-recipe-privacy-policy',
   },
 };
 

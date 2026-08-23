@@ -6,10 +6,15 @@ import DataDeletionHero from './components/DataDeletionHero';
 import DataDeletionForm from './components/DataDeletionForm';
 
 export const metadata: Metadata = {
-  title: 'SmartRecipe - Request Data Deletion',
+  title: 'SmartRecipe Data Deletion',
   description: 'Submit a request to have your personal data deleted from SmartRecipe.',
   alternates: {
     canonical: '/smartrecipe-data-deletion',
+  },
+  openGraph: {
+    title: 'SmartRecipe Data Deletion | Cetia Solutions',
+    description: 'Submit a request to have your personal data deleted from SmartRecipe.',
+    url: '/smartrecipe-data-deletion',
   },
 };
 

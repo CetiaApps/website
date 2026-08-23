@@ -7,23 +7,23 @@ export default function MiloPrivacyContent() {
       <div className="max-w-3xl mx-auto">
         {/* Header */}
         <div className="mb-12">
-          <Link href="/apps#milo" className="inline-flex items-center gap-2 text-sm font-bold mb-6 hover:underline" style={{ color: '#7C3AED' }}>
+          <Link href="/apps#milo" className="inline-flex items-center gap-2 text-sm font-bold mb-6 hover:underline" style={{ color: 'var(--accent)' }}>
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
               <path d="M19 12H5M12 19l-7-7 7-7" />
             </svg>
             Back to Milo
           </Link>
-          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-6" style={{ backgroundColor: '#EDE9FE', borderColor: '#7C3AED' }}>
-            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: '#7C3AED' }}>Milo · AI Assistant</span>
+          <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border mb-6" style={{ backgroundColor: 'var(--accent-light)', borderColor: 'var(--accent)' }}>
+            <span className="text-xs font-bold uppercase tracking-widest" style={{ color: 'var(--accent)' }}>Milo · AI Assistant</span>
           </div>
           <h1 className="text-4xl md:text-5xl font-extrabold text-foreground tracking-tight mb-4">Privacy Policy</h1>
           <p className="text-muted-foreground text-base">Last updated: May 10, 2026</p>
         </div>
 
         <div className="prose prose-stone max-w-none">
-          <div className="rounded-2xl p-6 mb-10 border" style={{ backgroundColor: '#EDE9FE', borderColor: '#7C3AED' }}>
+          <div className="rounded-2xl p-6 mb-10 border" style={{ backgroundColor: 'var(--accent-light)', borderColor: 'var(--accent)' }}>
             <p className="text-sm text-foreground leading-relaxed">
-              <strong>Summary:</strong> Milo collects only the data necessary to power your AI assistant experience and personalise responses over time. We do not sell your personal data or use your conversations for advertising. You can request deletion of your account and all associated data at any time by contacting <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a>.
+              <strong>Summary:</strong> Milo collects only the data necessary to power your AI assistant experience and personalise responses over time. We do not sell your personal data or use your conversations for advertising. You can request deletion of your account and all associated data at any time by contacting <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: 'var(--accent)' }}>contact@cetia-solutions.co.uk</a>.
             </p>
           </div>
 
@@ -33,7 +33,7 @@ export default function MiloPrivacyContent() {
               Milo is an AI assistant mobile application developed and operated by Cetia Solutions (&quot;we,&quot; &quot;us,&quot; or &quot;our&quot;). This Privacy Policy describes how we collect, use, and protect information you provide when using the Milo app on Android devices.
             </p>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Questions? Reach us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a>.
+              Questions? Reach us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: 'var(--accent)' }}>contact@cetia-solutions.co.uk</a>.
             </p>
           </section>
 
@@ -144,14 +144,14 @@ export default function MiloPrivacyContent() {
               <li><strong>Data portability:</strong> Receive your conversation history in a portable format (JSON/PDF).</li>
             </ul>
             <p className="text-muted-foreground leading-relaxed mt-4">
-              Contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a> to exercise any of these rights. We will respond within 30 days.
+              Contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: 'var(--accent)' }}>contact@cetia-solutions.co.uk</a> to exercise any of these rights. We will respond within 30 days.
             </p>
           </section>
 
           <section className="mb-10">
             <h2 className="text-2xl font-extrabold text-foreground mb-4">10. Children&apos;s Privacy</h2>
             <p className="text-muted-foreground leading-relaxed">
-              Milo is not directed to children under 13. We do not knowingly collect data from children. If you believe a child has created an account, please contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a> and we will delete the account immediately.
+              Milo is not directed to children under 13. We do not knowingly collect data from children. If you believe a child has created an account, please contact us at <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold" style={{ color: 'var(--accent)' }}>contact@cetia-solutions.co.uk</a> and we will delete the account immediately.
             </p>
           </section>
 
@@ -177,7 +177,7 @@ export default function MiloPrivacyContent() {
                       <td className="p-4 font-medium text-foreground">{row?.service}</td>
                       <td className="p-4 text-muted-foreground">{row?.purpose}</td>
                       <td className="p-4">
-                        <a href={row?.link} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline text-xs" style={{ color: '#7C3AED' }}>View Policy</a>
+                        <a href={row?.link} target="_blank" rel="noopener noreferrer" className="font-semibold hover:underline text-xs" style={{ color: 'var(--accent)' }}>View Policy</a>
                       </td>
                     </tr>
                   ))}
@@ -198,7 +198,7 @@ export default function MiloPrivacyContent() {
             <p className="text-muted-foreground leading-relaxed mb-6">
               For any privacy-related questions, requests, or concerns:
             </p>
-            <div className="rounded-2xl p-6 space-y-3 border" style={{ backgroundColor: '#EDE9FE', borderColor: '#7C3AED' }}>
+            <div className="rounded-2xl p-6 space-y-3 border" style={{ backgroundColor: 'var(--accent-light)', borderColor: 'var(--accent)' }}>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Company:</span>
                 <span className="text-muted-foreground text-sm">Cetia Solutions</span>
@@ -209,7 +209,7 @@ export default function MiloPrivacyContent() {
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Email:</span>
-                <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold text-sm hover:underline" style={{ color: '#7C3AED' }}>contact@cetia-solutions.co.uk</a>
+                <a href="mailto:contact@cetia-solutions.co.uk" className="font-semibold text-sm hover:underline" style={{ color: 'var(--accent)' }}>contact@cetia-solutions.co.uk</a>
               </div>
               <div className="flex items-center gap-3">
                 <span className="font-bold text-foreground text-sm w-24">Response:</span>

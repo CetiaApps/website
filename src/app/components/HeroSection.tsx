@@ -33,16 +33,15 @@ export default function HeroSection() {
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div
           className="absolute -top-32 -right-32 w-[600px] h-[600px] rounded-full opacity-20"
-          style={{ background: 'radial-gradient(circle, #7C3AED 0%, #A855F7 40%, transparent 70%)' }} />
-        
+          style={{ background: 'radial-gradient(circle, var(--accent) 0%, var(--accent-deep) 40%, transparent 70%)' }} />
+
         <div
           className="absolute bottom-0 -left-40 w-[500px] h-[500px] rounded-full opacity-10"
-          style={{ background: 'radial-gradient(circle, #A855F7 0%, #7C3AED 50%, transparent 70%)' }} />
-        
+          style={{ background: 'radial-gradient(circle, var(--accent-deep) 0%, var(--accent) 50%, transparent 70%)' }} />
+
         <div
-          className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full opacity-8"
-          style={{ background: 'radial-gradient(circle, #DFFF5C 0%, transparent 70%)' }} />
-        
+          className="absolute top-1/2 left-1/3 w-[300px] h-[300px] rounded-full opacity-10"
+          style={{ background: 'radial-gradient(circle, var(--ring) 0%, transparent 70%)' }} />
       </div>
 
       <div className="max-w-7xl mx-auto w-full relative z-10">
@@ -52,20 +51,20 @@ export default function HeroSection() {
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-secondary mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
-              <span className="text-xs font-bold uppercase tracking-widest text-primary">Mobile App Studio</span>
+              <span className="text-xs font-bold uppercase tracking-widest text-primary">UK software studio</span>
             </div>
 
             {/* Headline */}
             <h1 className="text-hero font-extrabold mb-8">
               <span className="line-reveal">
-                <span ref={line1Ref}>Bold Apps.</span>
+                <span ref={line1Ref}>Smart digital</span>
               </span>
               <span className="line-reveal">
-                <span ref={line2Ref} className="text-gradient-purple">Real Impact.</span>
+                <span ref={line2Ref} className="text-gradient-purple">solutions.</span>
               </span>
               <span className="line-reveal">
                 <span ref={line3Ref} className="inline-block bg-accent text-accent-foreground px-4 py-1 mt-2">
-                  Zero Limits.
+                  Built by Cetia.
                 </span>
               </span>
             </h1>
@@ -73,26 +72,26 @@ export default function HeroSection() {
             {/* Subheadline */}
             <div ref={subRef} className="scroll-reveal-hidden mb-10">
               <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-lg">
-                We build premium mobile experiences. Explore SmartRecipe and Milo AI Assistant — or let us craft your next breakthrough app.
+                We design and build mobile apps, SaaS platforms and AI-assisted workflows — and ship our own products, like SmartRecipe and Milo, to prove we practice what we build.
               </p>
             </div>
 
             {/* CTAs */}
             <div ref={ctaRef} className="scroll-reveal-hidden flex flex-wrap gap-4">
               <Link
-                href="/apps"
+                href="/contact"
                 className="inline-flex items-center gap-2 px-7 py-4 bg-primary text-primary-foreground rounded-full font-bold text-base hover:bg-secondary-foreground transition-all duration-300 hover:scale-105">
-                
-                Explore Our Apps
+
+                Contact Cetia Solutions
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
               </Link>
               <Link
-                href="/services"
+                href="/apps"
                 className="inline-flex items-center gap-2 px-7 py-4 border-2 border-border text-foreground rounded-full font-bold text-base hover:border-primary hover:text-primary transition-all duration-300">
-                
-                Build Your App
+
+                See our apps
               </Link>
             </div>
           </div>

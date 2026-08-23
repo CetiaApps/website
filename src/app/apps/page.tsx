@@ -3,14 +3,21 @@ import type { Metadata } from 'next';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import AppsHero from '@/app/apps/components/AppsHero';
-import SmartRecipeDetail from '@/app/apps/components/SmartRecipeDetail';
-import MiloDetail from '@/app/apps/components/MiloDetail';
+import AppsShowcase from '@/app/components/AppsShowcase';
+import CtaBanner from '@/app/components/CtaBanner';
 
 export const metadata: Metadata = {
   title: 'Apps',
-  description: 'Explore apps from Cetia Solutions, including SmartRecipe, Milo and SmartCart.',
+  description:
+    'Explore SmartRecipe and Milo, the in-house apps from Cetia Solutions — recipes with live supermarket price comparison, and an AI-powered personal assistant.',
   alternates: {
     canonical: '/apps',
+  },
+  openGraph: {
+    title: 'Apps | Cetia Solutions',
+    description:
+      'Explore SmartRecipe and Milo, the in-house apps from Cetia Solutions — recipes with live supermarket price comparison, and an AI-powered personal assistant.',
+    url: '/apps',
   },
 };
 
@@ -20,8 +27,8 @@ export default function AppsPage() {
       <Header />
       <main>
         <AppsHero />
-        <SmartRecipeDetail />
-        <MiloDetail />
+        <AppsShowcase />
+        <CtaBanner />
       </main>
       <Footer />
     </>

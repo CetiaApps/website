@@ -8,9 +8,9 @@ export default function CtaBanner() {
         <div className="relative rounded-3xl bg-purple-dark grain-overlay overflow-hidden p-12 md:p-16">
           {/* Decorative elements */}
           <div className="absolute top-0 right-0 w-96 h-96 rounded-full opacity-20 blur-3xl pointer-events-none"
-            style={{ background: 'radial-gradient(circle, #DFFF5C 0%, transparent 70%)' }} />
+            style={{ background: 'radial-gradient(circle, var(--ring) 0%, transparent 70%)' }} />
           <div className="absolute bottom-0 left-0 w-64 h-64 rounded-full opacity-15 blur-2xl pointer-events-none"
-            style={{ background: 'radial-gradient(circle, #A855F7 0%, transparent 70%)' }} />
+            style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }} />
 
           <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
             <div>
@@ -19,10 +19,10 @@ export default function CtaBanner() {
               </div>
               <h2 className="text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight mb-6">
                 Your idea deserves a<br />
-                <span className="text-accent accent-underline">world-class app.</span>
+                <span className="text-accent accent-underline">world-class product.</span>
               </h2>
               <p className="text-white/70 text-lg leading-relaxed">
-                Let Cetia Solutions turn your vision into a live, revenue-generating mobile product.
+                Let Cetia Solutions turn your vision into a live, revenue-generating app, SaaS platform or AI-assisted workflow.
               </p>
             </div>
             <div className="flex flex-col gap-4 md:items-end">

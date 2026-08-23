@@ -8,9 +8,15 @@ import ContactForm from '@/app/contact/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact',
   description:
-    'Contact Cetia Solutions about mobile apps, web platforms, business tools and AI-assisted development.',
+    'Contact Cetia Solutions about mobile apps, SaaS platforms and AI-assisted development for your business.',
   alternates: {
     canonical: '/contact',
+  },
+  openGraph: {
+    title: 'Contact | Cetia Solutions',
+    description:
+      'Contact Cetia Solutions about mobile apps, SaaS platforms and AI-assisted development for your business.',
+    url: '/contact',
   },
 };
 

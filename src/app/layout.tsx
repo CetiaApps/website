@@ -9,7 +9,7 @@ const gaMeasurementId = 'G-F79RRLRBXS';
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.cetia-solutions.co.uk';
 const siteName = 'Cetia Solutions';
 const defaultDescription =
-  'Cetia Solutions builds smart apps, automation tools and digital solutions for businesses and consumers, including SmartCart.';
+  'Cetia Solutions is a UK software studio building mobile apps, SaaS platforms and AI-assisted workflows — and shipping its own products, including SmartRecipe and Milo.';
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ['latin'],
@@ -26,7 +26,7 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: 'Cetia Solutions | App Development, Automation & Digital Solutions',
+    default: 'Cetia Solutions | Mobile Apps, SaaS & AI Agent Development',
     template: '%s | Cetia Solutions',
   },
   description: defaultDescription,
@@ -45,14 +45,14 @@ export const metadata: Metadata = {
   keywords: [
     'mobile app development',
     'app development',
-    'automation tools',
-    'digital solutions',
     'SaaS development',
     'AI agents',
+    'AI agent development',
     'UK app development',
+    'UK software studio',
+    'SmartRecipe',
+    'Milo AI assistant',
     'SmartCart',
-    'grocery price comparison app',
-    'supermarket price comparison',
   ],
   icons: {
     icon: [
@@ -62,7 +62,7 @@ export const metadata: Metadata = {
     apple: [{ url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' }],
   },
   openGraph: {
-    title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
+    title: 'Cetia Solutions | Mobile Apps, SaaS & AI Agent Development',
     description: defaultDescription,
     url: '/',
     siteName,
@@ -72,7 +72,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Cetia Solutions | App Development, Automation & Digital Solutions',
+    title: 'Cetia Solutions | Mobile Apps, SaaS & AI Agent Development',
     description: defaultDescription,
     images: ['/assets/images/cetia-solutions-logo.png'],
   },

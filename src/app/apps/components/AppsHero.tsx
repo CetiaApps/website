@@ -6,9 +6,9 @@ export default function AppsHero() {
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div className="absolute -top-20 right-0 w-[400px] h-[400px] rounded-full opacity-20"
-          style={{ background: 'radial-gradient(circle, #DFFF5C 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, var(--ring) 0%, transparent 70%)' }} />
         <div className="absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full opacity-15"
-          style={{ background: 'radial-gradient(circle, #A855F7 0%, transparent 70%)' }} />
+          style={{ background: 'radial-gradient(circle, var(--accent) 0%, transparent 70%)' }} />
       </div>
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/10 border border-white/20 mb-6">

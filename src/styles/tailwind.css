@@ -25,6 +25,8 @@
   --smartcart: #0F766E;
   --turquoise: #14B8A6;
   --purple: #7C3AED;
+  --accent-deep: #5B21B6;
+  --accent-light: #F3F0FF;
 }
 
 @layer base {
@@ -238,19 +240,15 @@
     letter-spacing: -0.025em;
   }
 
-  /* Purple dark section */
+  /* Dark CTA surface */
   .bg-purple-dark {
-    background: linear-gradient(135deg, #E7FFFB 0%, #EEF8FF 58%, #F4F0FF 100%);
-    border: 1px solid var(--border);
+    background: radial-gradient(120% 140% at 100% 0%, #163C43 0%, #0B2530 46%, #081A22 100%);
+    border: 1px solid rgba(255, 255, 255, 0.06);
   }
 
-  .bg-purple-dark.text-white,
-  .bg-purple-dark .text-white,
-  .bg-purple-dark .text-teal-50,
-  .bg-purple-dark .text-teal-100,
-  .bg-purple-dark .text-teal-200 {
-    color: var(--foreground);
-  }
+  .bg-purple-dark .text-teal-50 { color: rgba(255, 255, 255, 0.82); }
+  .bg-purple-dark .text-teal-100 { color: rgba(255, 255, 255, 0.7); }
+  .bg-purple-dark .text-teal-200 { color: var(--ring); }
 
   /* App badge pill */
   .app-badge {
@@ -268,4 +266,33 @@
   .text-turquoise { color: #14B8A6; }
   .bg-turquoise { background-color: #14B8A6; }
   .border-turquoise { border-color: #14B8A6; }
+
+  /* Soft hero background glow */
+  .bg-hero-glow {
+    position: relative;
+  }
+  .bg-hero-glow::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 0;
+    pointer-events: none;
+    background:
+      radial-gradient(60% 50% at 15% 0%, rgba(20, 184, 166, 0.14) 0%, transparent 100%),
+      radial-gradient(45% 40% at 100% 10%, rgba(124, 58, 237, 0.10) 0%, transparent 100%);
+  }
+  .bg-hero-glow > * {
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Elevated card with border glow on hover */
+  .card-elevated {
+    transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.3s ease;
+  }
+  .card-elevated:hover {
+    transform: translateY(-3px);
+    border-color: rgba(15, 118, 110, 0.35);
+    box-shadow: 0 16px 32px rgba(15, 41, 48, 0.08);
+  }
 }
