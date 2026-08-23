@@ -57,40 +57,53 @@ export default function SmartCartPage() {
       <Header />
       <main>
         <section className="bg-hero-glow border-b border-border bg-background pt-32">
-          <div className="mx-auto max-w-4xl px-5 pb-20 pt-6 text-center md:px-10 md:pb-28">
-            <Image
-              src="/assets/images/smartcart-logo.png"
-              alt="SmartCart logo"
-              width={84}
-              height={84}
-              className="mx-auto mb-7 rounded-xl shadow-sm"
-              priority
-            />
-            <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart has a new home</p>
-            <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-6xl">
-              SmartCart now lives at getsmartcart.co.uk
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-lg leading-8 text-muted-foreground">
-              The full SmartCart experience — web app, Android and iPhone — has moved to its own home so it can grow on
-              its own. Compare grocery prices across 7 UK supermarkets, build shopping lists, and track price history.
-            </p>
-            <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row">
-              <Link
-                href={smartCartUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-lg bg-primary px-7 text-sm font-extrabold text-primary-foreground shadow-sm transition-colors hover:bg-teal-800"
-              >
-                Visit getsmartcart.co.uk <ArrowRight size={18} />
-              </Link>
-              <Link
-                href={smartCartAppUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex min-h-[52px] items-center justify-center rounded-lg border border-border bg-card px-7 text-sm font-extrabold text-foreground shadow-sm transition-colors hover:border-primary hover:text-primary"
-              >
-                Open the web app
-              </Link>
+          <div className="mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-6 md:grid-cols-[1.05fr_0.95fr] md:px-10 md:pb-28">
+            <div className="text-center md:text-left">
+              <Image
+                src="/assets/images/smartcart-logo.png"
+                alt="SmartCart logo"
+                width={72}
+                height={72}
+                className="mx-auto mb-7 rounded-xl shadow-sm md:mx-0"
+                priority
+              />
+              <p className="mb-4 text-sm font-extrabold uppercase tracking-widest text-primary">SmartCart has a new home</p>
+              <h1 className="text-4xl font-extrabold tracking-tight text-foreground md:text-6xl">
+                SmartCart now lives at getsmartcart.co.uk
+              </h1>
+              <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-muted-foreground md:mx-0">
+                The full SmartCart experience — web app, Android and iPhone — has moved to its own home so it can grow on
+                its own. Compare grocery prices across 7 UK supermarkets, build shopping lists, and track price history.
+              </p>
+              <div className="mt-9 flex flex-col justify-center gap-3 sm:flex-row md:justify-start">
+                <Link
+                  href={smartCartUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[52px] items-center justify-center gap-2 rounded-full bg-primary px-7 text-sm font-extrabold text-primary-foreground shadow-sm transition-colors hover:bg-teal-800"
+                >
+                  Visit getsmartcart.co.uk <ArrowRight size={18} />
+                </Link>
+                <Link
+                  href={smartCartAppUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex min-h-[52px] items-center justify-center rounded-full border border-border bg-card px-7 text-sm font-extrabold text-foreground shadow-sm transition-colors hover:border-primary hover:text-primary"
+                >
+                  Open the web app
+                </Link>
+              </div>
+            </div>
+            <div className="flex justify-center">
+              <Image
+                src="/assets/images/smartcart-app-compare-prices.png"
+                alt="SmartCart app screen comparing prices across UK supermarkets"
+                width={853}
+                height={1844}
+                sizes="(max-width: 768px) 70vw, 360px"
+                className="h-auto w-full max-w-[300px] rounded-2xl shadow-2xl shadow-teal-900/15 md:max-w-[360px]"
+                priority
+              />
             </div>
           </div>
         </section>

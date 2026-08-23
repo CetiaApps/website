@@ -83,11 +83,12 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-5 md:px-10">
             <div className="card-elevated grid items-center gap-10 rounded-xl border border-border bg-card p-8 shadow-sm md:grid-cols-[auto_1fr_auto] md:p-10">
               <Image
-                src="/assets/images/smartcart-logo.png"
-                alt="SmartCart logo"
-                width={72}
-                height={72}
-                className="rounded-xl shadow-sm"
+                src="/assets/images/smartcart-app-shopping-list.png"
+                alt="SmartCart app screen showing a shared shopping list with live supermarket prices"
+                width={852}
+                height={1846}
+                sizes="140px"
+                className="mx-auto h-auto w-[140px] rounded-2xl shadow-lg shadow-teal-900/10"
               />
               <div className="min-w-0">
                 <p className="mb-2 text-sm font-extrabold uppercase tracking-widest text-primary">Our products</p>
