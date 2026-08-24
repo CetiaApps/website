@@ -47,7 +47,7 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto w-full relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
           {/* Left: Text */}
-          <div className="lg:col-span-6 xl:col-span-5">
+          <div className="lg:col-span-7 xl:col-span-6">
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-primary/30 bg-secondary mb-8">
               <span className="w-2 h-2 rounded-full bg-primary animate-pulse" />
@@ -97,7 +97,7 @@ export default function HeroSection() {
           </div>
 
           {/* Right: Phone mockups */}
-          <div className="lg:col-span-6 xl:col-span-7 relative flex items-center justify-center lg:justify-end">
+          <div className="lg:col-span-5 xl:col-span-6 relative flex items-center justify-center lg:justify-end">
             {/* Background circle */}
             <div
               className="absolute w-[420px] h-[420px] rounded-full opacity-15 pulse-glow"
@@ -121,18 +121,12 @@ export default function HeroSection() {
 
             {/* Phone stack */}
             <div className="relative w-full max-w-md mx-auto lg:mx-0 h-[520px] flex items-center justify-center">
-              {/* Back phone — Milo */}
-              <div className="absolute left-0 top-8 w-[200px] phone-frame bg-card overflow-hidden z-10 phone-tilt opacity-80"
-              style={{ borderRadius: '2.5rem' }}>
-                <div className="w-full h-[380px] relative">
-                  <AppImage
-                    src="/assets/images/MiloScreenshot1-1778437081371.png"
-                    alt="Milo AI Assistant chat interface showing intelligent conversation with a clean modern UI"
-                    fill
-                    className="object-cover"
-                    sizes="200px" />
-                  
-                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/40" />
+              {/* Back phone — Milo (brand tile, no screenshot) */}
+              <div className="absolute left-0 top-8 w-[200px] phone-frame overflow-hidden z-10 phone-tilt opacity-90"
+              style={{ borderRadius: '2.5rem', backgroundColor: 'var(--accent-deep)' }}>
+                <div className="w-full h-[380px] relative flex items-center justify-center">
+                  <span className="text-6xl font-extrabold text-white">M</span>
+                  <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/30" />
                   <div className="absolute bottom-3 left-3 right-3">
                     <span className="text-white text-xs font-bold tracking-wide">Milo AI</span>
                   </div>
@@ -144,12 +138,12 @@ export default function HeroSection() {
               style={{ borderRadius: '2.5rem' }}>
                 <div className="w-full h-[420px] relative">
                   <AppImage
-                    src="/assets/images/SmartRecipeMainScreen-1778436348487.png"
-                    alt="SmartRecipe app main screen showing recipe discovery and smart shopping features"
+                    src="/assets/images/SmartRecipeScreenshot4-1778436348276.png"
+                    alt="SmartRecipe app screen showing a recipe with ingredients and step-by-step instructions"
                     fill
                     className="object-cover"
                     sizes="220px" />
-                  
+
                   <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/50" />
                   {/* Notch */}
                   <div className="absolute top-3 left-1/2 -translate-x-1/2 w-16 h-5 bg-foreground rounded-full opacity-90" />

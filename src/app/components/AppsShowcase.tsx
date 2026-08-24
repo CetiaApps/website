@@ -48,16 +48,8 @@ const apps = [
       'AI-enabled tasks, notes and lists',
       'Unified personal productivity hub',
     ],
-    screens: [
-      '/assets/images/MiloScreenshot1-1778437081371.png',
-      '/assets/images/MiloScreenshot2-1778437081456.png',
-      '/assets/images/MiloScreenshot3-1778437081634.png',
-    ],
-    screenAlts: [
-      'Milo AI Assistant showing Gmail and Google Drive organisation interface',
-      'Milo AI Assistant showing bank transaction import and budget overview',
-      'Milo AI Assistant showing AI-enabled tasks, notes and lists',
-    ],
+    screens: [],
+    screenAlts: [],
     href: '/apps#milo',
     privacyHref: '/milo-privacy-policy',
     platform: 'Android',
@@ -164,32 +156,41 @@ export default function AppsShowcase() {
                   style={{ background: `radial-gradient(circle, ${app?.color} 0%, transparent 70%)` }}
                 />
                 {/* Phones row */}
-                <div className="relative flex gap-4 items-end justify-center">
-                  {app?.screens?.map((src, i) => (
-                    <div
-                      key={i}
-                      className={`relative phone-frame bg-foreground overflow-hidden flex-shrink-0 phone-tilt ${i === 1 ? 'z-20' : 'z-10 opacity-75'}`}
-                      style={{
-                        width: i === 1 ? '180px' : '150px',
-                        height: i === 1 ? '360px' : '300px',
-                        borderRadius: '2.2rem',
-                        marginBottom: i === 1 ? '0' : '30px',
-                      }}
-                    >
-                      {/* Notch */}
-                      <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-12 h-4 bg-foreground/80 rounded-full z-10" />
-                      <AppImage
-                        src={src}
-                        alt={app?.screenAlts?.[i]}
-                        fill
-                        className="object-cover"
-                        sizes={i === 1 ? '180px' : '150px'}
-                        priority={i === 1 && idx === 0}
-                      />
-                      <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
-                    </div>
-                  ))}
-                </div>
+                {app?.screens && app.screens.length > 0 ? (
+                  <div className="relative flex gap-4 items-end justify-center">
+                    {app.screens.map((src, i) => (
+                      <div
+                        key={i}
+                        className={`relative phone-frame bg-foreground overflow-hidden flex-shrink-0 phone-tilt ${i === 1 ? 'z-20' : 'z-10 opacity-75'}`}
+                        style={{
+                          width: i === 1 ? '180px' : '150px',
+                          height: i === 1 ? '360px' : '300px',
+                          borderRadius: '2.2rem',
+                          marginBottom: i === 1 ? '0' : '30px',
+                        }}
+                      >
+                        {/* Notch */}
+                        <div className="absolute top-2.5 left-1/2 -translate-x-1/2 w-12 h-4 bg-foreground/80 rounded-full z-10" />
+                        <AppImage
+                          src={src}
+                          alt={app?.screenAlts?.[i]}
+                          fill
+                          className="object-cover"
+                          sizes={i === 1 ? '180px' : '150px'}
+                          priority={i === 1 && idx === 0}
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-transparent to-black/30" />
+                      </div>
+                    ))}
+                  </div>
+                ) : (
+                  <div
+                    className="relative flex h-64 w-64 items-center justify-center rounded-[2.5rem] text-6xl font-extrabold text-white shadow-2xl"
+                    style={{ backgroundColor: app?.color }}
+                  >
+                    {app?.name?.charAt(0)}
+                  </div>
+                )}
               </div>
             </div>
           ))}
