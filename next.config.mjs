@@ -21,6 +21,16 @@ const nextConfig = {
   async redirects() {
     return [
       {
+        source: '/blog',
+        destination: 'https://getsmartcart.co.uk/blog',
+        permanent: true,
+      },
+      {
+        source: '/blog/:slug*',
+        destination: 'https://getsmartcart.co.uk/blog/:slug*',
+        permanent: true,
+      },
+      {
         source: '/smartcart-privacy-policy',
         destination: 'https://getsmartcart.co.uk/privacy',
         permanent: false,

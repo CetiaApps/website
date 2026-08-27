@@ -11,7 +11,6 @@ const services = [
 const smartCart = [
   { label: 'Visit getsmartcart.co.uk', href: 'https://getsmartcart.co.uk/' },
   { label: 'Open the web app', href: 'https://getsmartcart.co.uk/app' },
-  { label: 'SmartCart guides', href: '/blog' },
 ];
 
 const legal = [

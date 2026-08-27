@@ -14,7 +14,6 @@ const navLinks = [
 
 const productLinks = [
   { label: 'SmartCart', href: '/smartcart' },
-  { label: 'Shopping guides', href: '/blog' },
 ];
 
 export default function Header() {
@@ -81,7 +80,7 @@ export default function Header() {
                 aria-haspopup="menu"
                 aria-expanded={productsOpen}
                 className={`inline-flex items-center gap-1 rounded-lg px-4 py-2 text-sm font-semibold transition-colors ${
-                  pathname.startsWith('/smartcart') || pathname.startsWith('/blog')
+                  pathname.startsWith('/smartcart')
                     ? 'bg-primary text-primary-foreground'
                     : 'text-muted-foreground hover:bg-muted hover:text-foreground'
                 }`}
@@ -156,7 +155,7 @@ export default function Header() {
             </Link>
           ))}
           <div className="text-center">
-            <p className={`text-3xl font-extrabold tracking-tight ${pathname.startsWith('/smartcart') || pathname.startsWith('/blog') ? 'text-primary' : 'text-foreground'}`}>
+            <p className={`text-3xl font-extrabold tracking-tight ${pathname.startsWith('/smartcart') ? 'text-primary' : 'text-foreground'}`}>
               Products
             </p>
             {productLinks.map((link) => (
